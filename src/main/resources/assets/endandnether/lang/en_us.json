@@ -1,0 +1,14 @@
+{
+  "item.endandnether.black_opal": "Black Opal",
+  "item.endandnether.raw_black_opal": "Raw Black Opal",
+  "item.endandnether.sulfur_ingot": "Sulfur Ingot",
+  "item.endandnether.raw_sulfur": "Raw Sulfur",
+
+  "block.endandnether.black_opal_block": "Block Of Black Opal",
+  "block.endandnether.raw_black_opal_block": "Raw Block Of Black Opal",
+  "block.endandnether.black_opal_end_ore": "Black opal Ore",
+  "block.endandnether.sulfur_nether_ore": "Sulfur Ore",
+
+  "itemGroup.endandnether.nether_extended_tab": "Nether Extended Tab",
+  "itemGroup.endandnether.end_extended_tab": "End Extended Tab"
+}
