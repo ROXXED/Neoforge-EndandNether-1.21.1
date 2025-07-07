@@ -31,5 +31,12 @@ public class ModBlockTagProvider extends BlockTagsProvider {
                 .add(ModBlocks.BLACK_OPAL_BLOCK.get())
                 .add(ModBlocks.RAW_BLACK_OPAL_BLOCK.get())
                 .add(ModBlocks.BLACK_OPAL_END_ORE.get());
+
+
+        this.tag(BlockTags.LOGS)
+                .add(ModBlocks.HELLBARK_LOG.get())
+                .add(ModBlocks.HELLBARK_WOOD.get())
+                .add(ModBlocks.STRIPPED_HELLBARK_LOG.get())
+                .add(ModBlocks.STRIPPED_HELLBARK_WOOD.get());
     }
 }

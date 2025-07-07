@@ -2,9 +2,13 @@ package net.icedly.netherend.datagen;
 
 import net.icedly.netherend.EndandNether;
 import net.icedly.netherend.block.ModBlocks;
+import net.minecraft.core.registries.BuiltInRegistries;
 import net.minecraft.data.PackOutput;
+import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.level.block.Block;
+import net.minecraft.world.level.block.RotatedPillarBlock;
 import net.neoforged.neoforge.client.model.generators.BlockStateProvider;
+import net.neoforged.neoforge.client.model.generators.ModelFile;
 import net.neoforged.neoforge.common.data.ExistingFileHelper;
 import net.neoforged.neoforge.registries.DeferredBlock;
 
@@ -20,10 +24,41 @@ public class ModBlockStateProvider extends BlockStateProvider {
         blockWithItem(ModBlocks.BLACK_OPAL_END_ORE);
         blockWithItem(ModBlocks.SULFUR_NETHER_ORE);
 
+        logBlock(((RotatedPillarBlock) ModBlocks.HELLBARK_LOG.get()));
+        axisBlock(((RotatedPillarBlock) ModBlocks.HELLBARK_WOOD.get()), blockTexture(ModBlocks.HELLBARK_LOG.get()), blockTexture(ModBlocks.HELLBARK_LOG.get()));
+        logBlock(((RotatedPillarBlock) ModBlocks.STRIPPED_HELLBARK_LOG.get()));
+        axisBlock(((RotatedPillarBlock) ModBlocks.STRIPPED_HELLBARK_WOOD.get()), blockTexture(ModBlocks.STRIPPED_HELLBARK_LOG.get()), blockTexture(ModBlocks.STRIPPED_HELLBARK_LOG.get()));
+
+        blockItem(ModBlocks.HELLBARK_LOG);
+        blockItem(ModBlocks.HELLBARK_WOOD);
+        blockItem(ModBlocks.STRIPPED_HELLBARK_LOG);
+        blockItem(ModBlocks.STRIPPED_HELLBARK_WOOD);
+
+        blockItem(ModBlocks.HELLBARK_PLANKS);
+
+        leavesBlock(ModBlocks.HELLBARK_LEAVES);
+        saplingBlock(ModBlocks.HELLBARK_SAPLING);
+
+
     }
 
-    private void blockWithItem(DeferredBlock<Block> deferredBlock) {
-        simpleBlockWithItem(deferredBlock.get(), cubeAll(deferredBlock.get()));
+    private void leavesBlock(DeferredBlock<Block> deferredBlock) {
+        simpleBlockWithItem(deferredBlock.get(),
+                models().singleTexture(BuiltInRegistries.BLOCK.getKey(deferredBlock.get()).getPath(), ResourceLocation.parse("minecraft:block/leaves"),
+                        "all", blockTexture(deferredBlock.get())).renderType("cutout"));
     }
+
+    private void saplingBlock(DeferredBlock<Block> deferredBlock) {
+        simpleBlock(deferredBlock.get(), models().cross(BuiltInRegistries.BLOCK.getKey(deferredBlock.get()).getPath(), blockTexture(deferredBlock.get())).renderType("cutout"));
+
+}
+    private void blockWithItem(DeferredBlock<Block> deferredBlock) {
+        simpleBlockWithItem(deferredBlock.get(), cubeAll(deferredBlock.get()));        simpleBlockWithItem(deferredBlock.get(), cubeAll(deferredBlock.get()));
+    }
+
+    private void blockItem(DeferredBlock<Block> deferredBlock) {
+        simpleBlockItem(deferredBlock.get(), new ModelFile.UncheckedModelFile("endandnether:block/" + deferredBlock.getId().getPath()));
+    }
+
 
 }

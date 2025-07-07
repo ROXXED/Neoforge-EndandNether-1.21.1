@@ -1,9 +1,12 @@
 package net.icedly.netherend.datagen;
 
 import net.icedly.netherend.EndandNether;
+import net.icedly.netherend.block.ModBlocks;
 import net.minecraft.core.HolderLookup;
 import net.minecraft.data.PackOutput;
 import net.minecraft.data.tags.ItemTagsProvider;
+import net.minecraft.nbt.Tag;
+import net.minecraft.tags.ItemTags;
 import net.minecraft.world.level.block.Block;
 import net.neoforged.neoforge.common.data.ExistingFileHelper;
 import org.jetbrains.annotations.Nullable;
@@ -18,5 +21,14 @@ public class ModItemTagProvider extends ItemTagsProvider {
     @Override
     protected void addTags(HolderLookup.Provider provider) {
 
+
+        tag(ItemTags.LOGS)
+                .add(ModBlocks.HELLBARK_LOG.get().asItem())
+                .add(ModBlocks.HELLBARK_WOOD.get().asItem())
+                .add(ModBlocks.STRIPPED_HELLBARK_LOG.get().asItem())
+                .add(ModBlocks.STRIPPED_HELLBARK_WOOD.get().asItem());
+
+        tag(ItemTags.PLANKS)
+                .add(ModBlocks.HELLBARK_PLANKS.get().asItem());
     }
 }

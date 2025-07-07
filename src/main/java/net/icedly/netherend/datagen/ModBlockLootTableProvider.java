@@ -24,6 +24,15 @@ public class ModBlockLootTableProvider extends BlockLootSubProvider {
     protected void generate() {
         dropSelf(ModBlocks.BLACK_OPAL_BLOCK.get());
         dropSelf(ModBlocks.RAW_BLACK_OPAL_BLOCK.get());
+        dropSelf(ModBlocks.HELLBARK_LOG.get());
+        dropSelf(ModBlocks.HELLBARK_WOOD.get());
+        dropSelf(ModBlocks.HELLBARK_PLANKS.get());
+        dropSelf(ModBlocks.HELLBARK_SAPLING.get());
+        dropSelf(ModBlocks.STRIPPED_HELLBARK_LOG.get());
+        dropSelf(ModBlocks.STRIPPED_HELLBARK_WOOD.get());
+
+        this.add(ModBlocks.HELLBARK_LEAVES.get(), block ->
+                createLeavesDrops(block, ModBlocks.HELLBARK_SAPLING.get(), NORMAL_LEAVES_SAPLING_CHANCES));
 
         this.add(ModBlocks.BLACK_OPAL_END_ORE.get(),
                 block -> createOreDrop(ModBlocks.BLACK_OPAL_END_ORE.get(), ModItems.RAW_BLACK_OPAL.get()));

@@ -1,12 +1,13 @@
 package net.icedly.netherend.block;
 
 import net.icedly.netherend.EndandNether;
+import net.icedly.netherend.block.custom.ModRotatedPillarBlock;
 import net.icedly.netherend.item.ModItems;
+import net.icedly.netherend.worldgen.tree.ModTreeGrowers;
 import net.minecraft.util.valueproviders.UniformInt;
 import net.minecraft.world.item.BlockItem;
 import net.minecraft.world.item.Item;
-import net.minecraft.world.level.block.Block;
-import net.minecraft.world.level.block.DropExperienceBlock;
+import net.minecraft.world.level.block.*;
 import net.minecraft.world.level.block.state.BlockBehaviour;
 import net.neoforged.bus.api.IEventBus;
 import net.neoforged.neoforge.registries.DeferredBlock;
@@ -29,7 +30,23 @@ public class ModBlocks {
             () -> new DropExperienceBlock(UniformInt.of(2, 5),
                     BlockBehaviour.Properties.of().strength(4f).requiresCorrectToolForDrops()));
 
+    public static final DeferredBlock<Block> HELLBARK_LOG = registerBlock("hellbark_log",
+            () -> new ModRotatedPillarBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.CRIMSON_STEM)));
+    public static final DeferredBlock<Block> HELLBARK_WOOD = registerBlock("hellbark_wood",
+            () -> new ModRotatedPillarBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.CRIMSON_STEM)));
+    public static final DeferredBlock<Block> STRIPPED_HELLBARK_LOG = registerBlock("stripped_hellbark_log",
+            () -> new ModRotatedPillarBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.CRIMSON_STEM)));
+    public static final DeferredBlock<Block> STRIPPED_HELLBARK_WOOD = registerBlock("stripped_hellbark_wood",
+            () -> new ModRotatedPillarBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.CRIMSON_STEM)));
 
+    public static final DeferredBlock<Block> HELLBARK_PLANKS = registerBlock("hellbark_planks",
+            () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.CRIMSON_PLANKS)));
+
+    public static final DeferredBlock<Block> HELLBARK_LEAVES = registerBlock("hellbark_leaves",
+            () -> new LeavesBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.NETHER_WART_BLOCK)));
+
+    public static final DeferredBlock<Block> HELLBARK_SAPLING = registerBlock("hellbark_sapling",
+            () -> new SaplingBlock(ModTreeGrowers.HELLBARK, BlockBehaviour.Properties.ofFullCopy(Blocks.OAK_SAPLING)));
 
 
 

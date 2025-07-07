@@ -7,11 +7,17 @@ import net.minecraft.data.worldgen.BootstrapContext;
 import net.minecraft.resources.ResourceKey;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.tags.BlockTags;
+import net.minecraft.util.valueproviders.ConstantInt;
 import net.minecraft.world.level.block.Blocks;
 import net.minecraft.world.level.levelgen.feature.ConfiguredFeature;
 import net.minecraft.world.level.levelgen.feature.Feature;
 import net.minecraft.world.level.levelgen.feature.configurations.FeatureConfiguration;
 import net.minecraft.world.level.levelgen.feature.configurations.OreConfiguration;
+import net.minecraft.world.level.levelgen.feature.configurations.TreeConfiguration;
+import net.minecraft.world.level.levelgen.feature.featuresize.TwoLayersFeatureSize;
+import net.minecraft.world.level.levelgen.feature.foliageplacers.BlobFoliagePlacer;
+import net.minecraft.world.level.levelgen.feature.stateproviders.BlockStateProvider;
+import net.minecraft.world.level.levelgen.feature.trunkplacers.StraightTrunkPlacer;
 import net.minecraft.world.level.levelgen.structure.templatesystem.BlockMatchTest;
 import net.minecraft.world.level.levelgen.structure.templatesystem.RuleTest;
 import net.minecraft.world.level.levelgen.structure.templatesystem.TagMatchTest;
@@ -20,12 +26,23 @@ import org.apache.commons.codec.language.bm.Rule;
 import java.util.List;
 
 public class ModConfiguredFeatures {
+    public static final ResourceKey<ConfiguredFeature<?, ?>> HELLBARK_KEY = registerKey("hellbark");
+
+
 
     public static final ResourceKey<ConfiguredFeature<?, ?>> NETHER_SULFUR_ORE_KEY = registerKey("sulfur_ore");
     public static final ResourceKey<ConfiguredFeature<?, ?>> END_BLACK_OPAL_ORE_KEY = registerKey("black_opal_ore");
 
 
     public static void bootstrap(BootstrapContext<ConfiguredFeature<?, ?>> context) {
+
+        register(context, HELLBARK_KEY, Feature.TREE, new TreeConfiguration.TreeConfigurationBuilder(
+                BlockStateProvider.simple(ModBlocks.HELLBARK_LOG.get()),
+                new StraightTrunkPlacer(4, 5, 3),
+                BlockStateProvider.simple(ModBlocks.HELLBARK_LEAVES.get()),
+                new BlobFoliagePlacer(ConstantInt.of(4), ConstantInt.of(2), 4),
+                new TwoLayersFeatureSize(1, 0, 2)).build());
+
 
 
         RuleTest netherrackReplaceables = new BlockMatchTest(Blocks.NETHERRACK);
