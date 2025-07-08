@@ -25,7 +25,16 @@ public class ModCreativeModeTabs {
                     .displayItems((pParameters, pOutput) -> {
                         pOutput.accept(ModItems.RAW_SULFUR);
                         pOutput.accept(ModItems.SULFUR_INGOT);
+                        pOutput.accept(ModItems.RAW_RUBY);
+                        pOutput.accept(ModItems.RUBY_INGOT);
                         pOutput.accept(ModBlocks.SULFUR_NETHER_ORE);
+                        pOutput.accept(ModBlocks.RUBY_NETHER_ORE);
+                        pOutput.accept(ModBlocks.RUBY_BLOCK);
+                        pOutput.accept(ModBlocks.HELLBARK_LEAVES);
+                        pOutput.accept(ModBlocks.HELLBARK_LOG);
+                        pOutput.accept(ModBlocks.HELLBARK_PLANKS);
+                        pOutput.accept(ModBlocks.HELLBARK_SAPLING);
+                        pOutput.accept(ModBlocks.STRIPPED_HELLBARK_LOG);
 
                     }).build());    public static final Supplier<CreativeModeTab> END_EXTENDED_TAB =
             CREATIVE_MOD_TABS.register("end_extended_tab", () -> CreativeModeTab.builder()
@@ -34,10 +43,14 @@ public class ModCreativeModeTabs {
                     .withTabsBefore(ResourceLocation.fromNamespaceAndPath(EndandNether.MOD_ID, "nether_extended_tab"))
                     .displayItems((pParameters, pOutput) -> {
                         pOutput.accept(ModItems.BLACK_OPAL);
+                        pOutput.accept(ModItems.BISMUTH);
+                        pOutput.accept(ModItems.RAW_BISMUTH);
+                        pOutput.accept(ModBlocks.BISMUTH_END_ORE);
                         pOutput.accept(ModItems.RAW_BLACK_OPAL);
                         pOutput.accept(ModBlocks.BLACK_OPAL_END_ORE);
                         pOutput.accept(ModBlocks.RAW_BLACK_OPAL_BLOCK);
                         pOutput.accept(ModBlocks.BLACK_OPAL_BLOCK);
+                        pOutput.accept(ModBlocks.ROTTED_END_STONE);
 
                     }).build());
 

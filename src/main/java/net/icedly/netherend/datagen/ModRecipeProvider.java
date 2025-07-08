@@ -24,8 +24,14 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
         List<ItemLike> BLACK_OPAL_SMELTABLES = List.of(ModItems.BLACK_OPAL,
                 ModBlocks.BLACK_OPAL_END_ORE);
 
+        List<ItemLike> BISMUTH_SMELTABLES = List.of(ModItems.BISMUTH,
+                ModBlocks.BISMUTH_END_ORE);
+
         List<ItemLike> SULFUR_SMELTABLES = List.of(ModItems.SULFUR_INGOT,
                 ModBlocks.SULFUR_NETHER_ORE);
+
+        List<ItemLike> RUBY_SMELTABLES = List.of(ModItems.RUBY_INGOT,
+                ModBlocks.RUBY_NETHER_ORE);
 
         ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModBlocks.BLACK_OPAL_BLOCK.get())
                 .pattern("AAA")
@@ -40,12 +46,14 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
                 .unlockedBy("has_black_opal_block", has(ModBlocks.BLACK_OPAL_BLOCK.get())).save(recipeOutput);
 
 
-
-
+        oreBlasting(recipeOutput, BISMUTH_SMELTABLES, RecipeCategory.MISC, ModItems.BISMUTH.get(), 0.25f ,200, "bismuth");
+        oreSmelting(recipeOutput, BISMUTH_SMELTABLES, RecipeCategory.MISC, ModItems.BISMUTH.get(), 0.25f ,200, "bismuth");
         oreSmelting(recipeOutput, BLACK_OPAL_SMELTABLES, RecipeCategory.MISC, ModItems.BLACK_OPAL.get(), 0.25f ,200, "black_opal");
         oreBlasting(recipeOutput, BLACK_OPAL_SMELTABLES, RecipeCategory.MISC, ModItems.BLACK_OPAL.get(), 0.25f ,100, "black_opal");
         oreSmelting(recipeOutput, SULFUR_SMELTABLES, RecipeCategory.MISC, ModItems.SULFUR_INGOT.get(), 0.25f ,200, "sulfur_ingot");
         oreBlasting(recipeOutput, SULFUR_SMELTABLES, RecipeCategory.MISC, ModItems.SULFUR_INGOT.get(), 0.25f ,100, "sulfur_ingot");
+        oreSmelting(recipeOutput, RUBY_SMELTABLES, RecipeCategory.MISC, ModItems.RUBY_INGOT.get(), 0.25f ,200, "ruby_ingot");
+        oreBlasting(recipeOutput, RUBY_SMELTABLES, RecipeCategory.MISC, ModItems.RUBY_INGOT.get(), 0.25f ,100, "ruby_ingot");
     }
 
     protected static void oreSmelting(RecipeOutput pRecipeOutput, List<ItemLike> pIngredients, RecipeCategory pCategory, ItemLike pResult,

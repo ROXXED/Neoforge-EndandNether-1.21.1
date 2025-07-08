@@ -3,6 +3,8 @@ package net.icedly.netherend;
 import net.icedly.netherend.block.ModBlocks;
 import net.icedly.netherend.item.ModCreativeModeTabs;
 import net.icedly.netherend.item.ModItems;
+import net.icedly.netherend.worldgen.biome.ModBiomes;
+import net.icedly.netherend.worldgen.biome.ModSurfaceRules;
 import org.slf4j.Logger;
 
 import com.mojang.logging.LogUtils;
@@ -32,6 +34,7 @@ import net.neoforged.neoforge.registries.DeferredBlock;
 import net.neoforged.neoforge.registries.DeferredHolder;
 import net.neoforged.neoforge.registries.DeferredItem;
 import net.neoforged.neoforge.registries.DeferredRegister;
+import terrablender.api.SurfaceRuleManager;
 
 // The value here should match an entry in the META-INF/neoforge.mods.toml file
 @Mod(EndandNether.MOD_ID)
@@ -69,8 +72,14 @@ public class EndandNether {
     }
 
     private void commonSetup(FMLCommonSetupEvent event) {
-        // Some common setup code
-        LOGGER.info("HELLO FROM COMMON SETUP");
+      event.enqueueWork(() -> {
+
+          ModBiomes.registerBiomes();
+
+          SurfaceRuleManager.addSurfaceRules(SurfaceRuleManager.RuleCategory.NETHER, MOD_ID, ModSurfaceRules.makeGlowstonePlainsRules());
+          SurfaceRuleManager.addSurfaceRules(SurfaceRuleManager.RuleCategory.END, MOD_ID, ModSurfaceRules.makeEndRotRules());
+
+      });
 
         if (Config.LOG_DIRT_BLOCK.getAsBoolean()) {
             LOGGER.info("DIRT BLOCK >> {}", BuiltInRegistries.BLOCK.getKey(Blocks.DIRT));

@@ -23,21 +23,27 @@ public class ModBlockLootTableProvider extends BlockLootSubProvider {
     @Override
     protected void generate() {
         dropSelf(ModBlocks.BLACK_OPAL_BLOCK.get());
+        dropSelf(ModBlocks.RUBY_BLOCK.get());
+        dropSelf(ModBlocks.ROTTED_END_STONE.get());
         dropSelf(ModBlocks.RAW_BLACK_OPAL_BLOCK.get());
-        dropSelf(ModBlocks.HELLBARK_LOG.get());
-        dropSelf(ModBlocks.HELLBARK_WOOD.get());
-        dropSelf(ModBlocks.HELLBARK_PLANKS.get());
-        dropSelf(ModBlocks.HELLBARK_SAPLING.get());
-        dropSelf(ModBlocks.STRIPPED_HELLBARK_LOG.get());
-        dropSelf(ModBlocks.STRIPPED_HELLBARK_WOOD.get());
+        this.dropSelf(ModBlocks.HELLBARK_LOG.get());
+        this.dropSelf(ModBlocks.HELLBARK_WOOD.get());
+        this.dropSelf(ModBlocks.HELLBARK_PLANKS.get());
+        this.dropSelf(ModBlocks.HELLBARK_SAPLING.get());
+        this.dropSelf(ModBlocks.STRIPPED_HELLBARK_LOG.get());
+        this.dropSelf(ModBlocks.STRIPPED_HELLBARK_WOOD.get());
 
         this.add(ModBlocks.HELLBARK_LEAVES.get(), block ->
                 createLeavesDrops(block, ModBlocks.HELLBARK_SAPLING.get(), NORMAL_LEAVES_SAPLING_CHANCES));
 
         this.add(ModBlocks.BLACK_OPAL_END_ORE.get(),
                 block -> createOreDrop(ModBlocks.BLACK_OPAL_END_ORE.get(), ModItems.RAW_BLACK_OPAL.get()));
+        this.add(ModBlocks.BISMUTH_END_ORE.get(),
+                block -> createOreDrop(ModBlocks.BISMUTH_END_ORE.get(), ModItems.RAW_BISMUTH.get()));
         this.add(ModBlocks.SULFUR_NETHER_ORE.get(),
                 block -> createOreDrop(ModBlocks.SULFUR_NETHER_ORE.get(), ModItems.RAW_SULFUR.get()));
+        this.add(ModBlocks.RUBY_NETHER_ORE.get(),
+                block -> createOreDrop(ModBlocks.RUBY_NETHER_ORE.get(), ModItems.RAW_RUBY.get()));
 
     }
 

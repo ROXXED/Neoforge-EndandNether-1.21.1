@@ -22,6 +22,10 @@ public class ModItemModelProvider extends ItemModelProvider {
         basicItem(ModItems.RAW_BLACK_OPAL.get());
         basicItem(ModItems.RAW_SULFUR.get());
         basicItem(ModItems.SULFUR_INGOT.get());
+        basicItem(ModItems.RAW_RUBY.get());
+        basicItem(ModItems.RUBY_INGOT.get());
+        basicItem(ModItems.RAW_BISMUTH.get());
+        basicItem(ModItems.BISMUTH.get());
 
 
         saplingItem(ModBlocks.HELLBARK_SAPLING);

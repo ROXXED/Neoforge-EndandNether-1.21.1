@@ -31,17 +31,19 @@ public class ModConfiguredFeatures {
 
 
     public static final ResourceKey<ConfiguredFeature<?, ?>> NETHER_SULFUR_ORE_KEY = registerKey("sulfur_ore");
+    public static final ResourceKey<ConfiguredFeature<?, ?>> NETHER_RUBY_ORE_KEY = registerKey("ruby_ore");
     public static final ResourceKey<ConfiguredFeature<?, ?>> END_BLACK_OPAL_ORE_KEY = registerKey("black_opal_ore");
+    public static final ResourceKey<ConfiguredFeature<?, ?>> END_BISMUTH_ORE_KEY = registerKey("bismuth_ore");
 
 
     public static void bootstrap(BootstrapContext<ConfiguredFeature<?, ?>> context) {
 
         register(context, HELLBARK_KEY, Feature.TREE, new TreeConfiguration.TreeConfigurationBuilder(
                 BlockStateProvider.simple(ModBlocks.HELLBARK_LOG.get()),
-                new StraightTrunkPlacer(4, 5, 3),
+                new StraightTrunkPlacer(2, 3, 1),
                 BlockStateProvider.simple(ModBlocks.HELLBARK_LEAVES.get()),
-                new BlobFoliagePlacer(ConstantInt.of(4), ConstantInt.of(2), 4),
-                new TwoLayersFeatureSize(1, 0, 2)).build());
+                new BlobFoliagePlacer(ConstantInt.of(3), ConstantInt.of(1), 2),
+                new TwoLayersFeatureSize(1, 0, 2)).dirt(BlockStateProvider.simple(Blocks.NETHERRACK)).build());
 
 
 
@@ -51,8 +53,14 @@ public class ModConfiguredFeatures {
         register(context, NETHER_SULFUR_ORE_KEY, Feature.ORE, new OreConfiguration(netherrackReplaceables,
                 ModBlocks.SULFUR_NETHER_ORE.get().defaultBlockState(),9));
 
+        register(context, NETHER_RUBY_ORE_KEY, Feature.ORE, new OreConfiguration(netherrackReplaceables,
+                ModBlocks.RUBY_NETHER_ORE.get().defaultBlockState(),9));
+
         register(context, END_BLACK_OPAL_ORE_KEY, Feature.ORE, new OreConfiguration(endReplaceables,
                 ModBlocks.BLACK_OPAL_END_ORE.get().defaultBlockState(),9));
+
+        register(context, END_BISMUTH_ORE_KEY, Feature.ORE, new OreConfiguration(endReplaceables,
+                ModBlocks.BISMUTH_END_ORE.get().defaultBlockState(),9));
 
     }
 

@@ -20,13 +20,19 @@ public class ModBlockStateProvider extends BlockStateProvider {
     @Override
     protected void registerStatesAndModels() {
         blockWithItem(ModBlocks.BLACK_OPAL_BLOCK);
+        blockWithItem(ModBlocks.RUBY_BLOCK);
+        blockWithItem(ModBlocks.ROTTED_END_STONE);
         blockWithItem(ModBlocks.RAW_BLACK_OPAL_BLOCK);
         blockWithItem(ModBlocks.BLACK_OPAL_END_ORE);
+        blockWithItem(ModBlocks.BISMUTH_END_ORE);
         blockWithItem(ModBlocks.SULFUR_NETHER_ORE);
+        blockWithItem(ModBlocks.RUBY_NETHER_ORE);
 
         logBlock(((RotatedPillarBlock) ModBlocks.HELLBARK_LOG.get()));
         axisBlock(((RotatedPillarBlock) ModBlocks.HELLBARK_WOOD.get()), blockTexture(ModBlocks.HELLBARK_LOG.get()), blockTexture(ModBlocks.HELLBARK_LOG.get()));
+
         logBlock(((RotatedPillarBlock) ModBlocks.STRIPPED_HELLBARK_LOG.get()));
+
         axisBlock(((RotatedPillarBlock) ModBlocks.STRIPPED_HELLBARK_WOOD.get()), blockTexture(ModBlocks.STRIPPED_HELLBARK_LOG.get()), blockTexture(ModBlocks.STRIPPED_HELLBARK_LOG.get()));
 
         blockItem(ModBlocks.HELLBARK_LOG);
@@ -34,9 +40,10 @@ public class ModBlockStateProvider extends BlockStateProvider {
         blockItem(ModBlocks.STRIPPED_HELLBARK_LOG);
         blockItem(ModBlocks.STRIPPED_HELLBARK_WOOD);
 
-        blockItem(ModBlocks.HELLBARK_PLANKS);
+        blockWithItem(ModBlocks.HELLBARK_PLANKS);
 
         leavesBlock(ModBlocks.HELLBARK_LEAVES);
+
         saplingBlock(ModBlocks.HELLBARK_SAPLING);
 
 
@@ -53,7 +60,7 @@ public class ModBlockStateProvider extends BlockStateProvider {
 
 }
     private void blockWithItem(DeferredBlock<Block> deferredBlock) {
-        simpleBlockWithItem(deferredBlock.get(), cubeAll(deferredBlock.get()));        simpleBlockWithItem(deferredBlock.get(), cubeAll(deferredBlock.get()));
+        simpleBlockItem(deferredBlock.get(), cubeAll(deferredBlock.get()));        simpleBlockWithItem(deferredBlock.get(), cubeAll(deferredBlock.get()));
     }
 
     private void blockItem(DeferredBlock<Block> deferredBlock) {

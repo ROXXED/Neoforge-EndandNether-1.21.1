@@ -20,6 +20,18 @@ public class ModItems {
     public static final DeferredItem<Item> RAW_SULFUR =
             ITEMS.registerItem("raw_sulfur",
             Item::new, new Item.Properties());
+    public static final DeferredItem<Item> RUBY_INGOT =
+            ITEMS.registerItem("ruby_ingot",
+            Item::new, new Item.Properties());
+    public static final DeferredItem<Item> RAW_RUBY =
+            ITEMS.registerItem("raw_ruby",
+            Item::new, new Item.Properties());
+    public static final DeferredItem<Item> RAW_BISMUTH =
+            ITEMS.registerItem("raw_bismuth",
+            Item::new, new Item.Properties());
+    public static final DeferredItem<Item> BISMUTH =
+            ITEMS.registerItem("bismuth",
+            Item::new, new Item.Properties());
 
     public static void register(IEventBus eventBus) {
         ITEMS.register(eventBus);
