@@ -60,6 +60,13 @@ public class ModSurfaceRules {
                 SurfaceRules.ifTrue(SurfaceRules.ON_FLOOR, ROTTED_END_STONE)
         );
     }
+    public static SurfaceRules.RuleSource makeEndDunesRules() {
+        return SurfaceRules.sequence(
+                SurfaceRules.ifTrue(SurfaceRules.isBiome(ModBiomes.END_DUNES), END_SAND),
+                // Default to end stone
+                SurfaceRules.ifTrue(SurfaceRules.ON_FLOOR, END_SAND)
+        );
+    }
 
     private static SurfaceRules.RuleSource makeStateRule(Block block) {
         return SurfaceRules.state(block.defaultBlockState());

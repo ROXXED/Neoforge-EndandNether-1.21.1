@@ -15,12 +15,14 @@ public class ModBiomes {
     public static final ResourceKey<Biome> KAUPEN_VALLEY = registerBiomeKey("kaupen_valley");
     public static final ResourceKey<Biome> GLOWSTONE_PLAIN = registerBiomeKey("glowstone_plain");
     public static final ResourceKey<Biome> END_ROT = registerBiomeKey("end_rot");
+    public static final ResourceKey<Biome> END_DUNES = registerBiomeKey("end_dunes");
 
     public static void registerBiomes() {
         Regions.register(new OverworldRegion(ResourceLocation.fromNamespaceAndPath(EndandNether.MOD_ID, "endandnether_overworld"), 20));
         Regions.register(new NetherRegion(ResourceLocation.fromNamespaceAndPath(EndandNether.MOD_ID, "endandnether_nether"), 20));
 
         EndBiomeRegistry.registerHighlandsBiome(END_ROT, 20);
+        EndBiomeRegistry.registerHighlandsBiome(END_DUNES, 20);
     }
 
     public static void bootstrap(BootstrapContext<Biome> context) {
@@ -30,6 +32,7 @@ public class ModBiomes {
         register(context, KAUPEN_VALLEY, ModOverworldBiomes.kaupenValley(placedFeatures, carver));
         register(context, GLOWSTONE_PLAIN, ModNetherBiomes.glowstonePlains(placedFeatures, carver));
         register(context, END_ROT, ModEndBiomes.endRot(placedFeatures, carver));
+        register(context, END_DUNES, ModEndBiomes.endDunes(placedFeatures, carver));
     }
 
 
