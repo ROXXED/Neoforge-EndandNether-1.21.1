@@ -17,6 +17,7 @@ public class ModSurfaceRules {
 
     private static final SurfaceRules.RuleSource OBSIDIAN = makeStateRule(Blocks.OBSIDIAN);
     private static final SurfaceRules.RuleSource ROTTED_END_STONE = makeStateRule(ModBlocks.ROTTED_END_STONE.get());
+    private static final SurfaceRules.RuleSource END_SAND = makeStateRule(ModBlocks.END_SAND.get());
     private static final SurfaceRules.RuleSource END_STONE = makeStateRule(Blocks.END_STONE);
 
     private static final SurfaceRules.RuleSource GLOWSTONE = makeStateRule(Blocks.GLOWSTONE);

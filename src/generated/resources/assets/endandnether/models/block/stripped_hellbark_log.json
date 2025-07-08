@@ -1,0 +1,7 @@
+{
+  "parent": "minecraft:block/cube_column",
+  "textures": {
+    "end": "endandnether:block/stripped_hellbark_log_top",
+    "side": "endandnether:block/stripped_hellbark_log"
+  }
+}

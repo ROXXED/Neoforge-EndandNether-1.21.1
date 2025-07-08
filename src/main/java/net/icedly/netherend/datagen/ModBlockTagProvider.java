@@ -21,6 +21,7 @@ public class ModBlockTagProvider extends BlockTagsProvider {
         this.tag(BlockTags.MINEABLE_WITH_PICKAXE)
                 .add(ModBlocks.BLACK_OPAL_BLOCK.get())
                 .add(ModBlocks.ROTTED_END_STONE.get())
+                .add(ModBlocks.END_SAND.get())
                 .add(ModBlocks.SULFUR_NETHER_ORE.get())
                 .add(ModBlocks.RUBY_NETHER_ORE.get())
                 .add(ModBlocks.RAW_BLACK_OPAL_BLOCK.get())

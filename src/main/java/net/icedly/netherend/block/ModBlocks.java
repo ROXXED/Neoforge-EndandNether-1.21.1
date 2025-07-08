@@ -24,6 +24,8 @@ public class ModBlocks {
             () -> new Block(BlockBehaviour.Properties.of().strength(4f).requiresCorrectToolForDrops()));
     public static final DeferredBlock<Block> ROTTED_END_STONE = registerBlock("rotted_end_stone",
             () -> new Block(BlockBehaviour.Properties.of().strength(4f)));
+    public static final DeferredBlock<Block> END_SAND = registerBlock("end_sand",
+            () -> new Block(BlockBehaviour.Properties.of().strength(4f).sound(SoundType.SAND)));
     public static final DeferredBlock<Block> RUBY_BLOCK = registerBlock("ruby_block",
             () -> new Block(BlockBehaviour.Properties.of().strength(4f).requiresCorrectToolForDrops()));
     public static final DeferredBlock<Block> RAW_BLACK_OPAL_BLOCK = registerBlock("raw_black_opal_block",

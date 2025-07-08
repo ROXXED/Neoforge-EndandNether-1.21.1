@@ -1,0 +1,16 @@
+{
+  "variants": {
+    "axis=x": {
+      "model": "endandnether:block/stripped_hellbark_wood_horizontal",
+      "x": 90,
+      "y": 90
+    },
+    "axis=y": {
+      "model": "endandnether:block/stripped_hellbark_wood"
+    },
+    "axis=z": {
+      "model": "endandnether:block/stripped_hellbark_wood_horizontal",
+      "x": 90
+    }
+  }
+}

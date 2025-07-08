@@ -1,0 +1,5 @@
+// 1.21.1	2025-07-08T17:23:23.0462007	Tags for minecraft:block mod id endandnether
+f3fc59ac5eb882f5e14e134a699f94a9a794ef7c data/minecraft/tags/block/logs.json
+5203c31c21c78499f201033928696f32e6298653 data/minecraft/tags/block/mineable/pickaxe.json
+8c7ec1edc4c83c1064a985e3bff9198bdea33f90 data/minecraft/tags/block/needs_diamond_tool.json
+92c4cf751d5c86afe74c50078af0a3b638fd659b data/minecraft/tags/block/needs_iron_tool.json

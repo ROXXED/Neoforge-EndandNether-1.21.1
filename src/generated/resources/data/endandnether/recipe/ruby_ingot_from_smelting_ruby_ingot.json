@@ -1,0 +1,14 @@
+{
+  "type": "minecraft:smelting",
+  "category": "misc",
+  "cookingtime": 200,
+  "experience": 0.25,
+  "group": "ruby_ingot",
+  "ingredient": {
+    "item": "endandnether:ruby_ingot"
+  },
+  "result": {
+    "count": 1,
+    "id": "endandnether:ruby_ingot"
+  }
+}

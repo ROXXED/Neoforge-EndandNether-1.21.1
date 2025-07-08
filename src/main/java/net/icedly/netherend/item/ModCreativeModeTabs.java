@@ -51,6 +51,7 @@ public class ModCreativeModeTabs {
                         pOutput.accept(ModBlocks.RAW_BLACK_OPAL_BLOCK);
                         pOutput.accept(ModBlocks.BLACK_OPAL_BLOCK);
                         pOutput.accept(ModBlocks.ROTTED_END_STONE);
+                        pOutput.accept(ModBlocks.END_SAND);
 
                     }).build());
 
