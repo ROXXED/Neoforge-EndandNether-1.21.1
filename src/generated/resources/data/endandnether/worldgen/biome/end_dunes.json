@@ -1,11 +1,5 @@
 {
-  "carvers": {
-    "air": [
-      "minecraft:cave",
-      "minecraft:cave_extra_underground",
-      "minecraft:canyon"
-    ]
-  },
+  "carvers": {},
   "downfall": 0.0,
   "effects": {
     "ambient_sound": "minecraft:ambient.soul_sand_valley.loop",
@@ -34,10 +28,7 @@
   },
   "features": [
     [],
-    [
-      "minecraft:lake_lava_underground",
-      "minecraft:lake_lava_surface"
-    ],
+    [],
     [],
     [],
     [],
@@ -59,6 +50,12 @@
     "creature": [
       {
         "type": "minecraft:enderman",
+        "maxCount": 4,
+        "minCount": 2,
+        "weight": 20
+      },
+      {
+        "type": "minecraft:phantom",
         "maxCount": 3,
         "minCount": 2,
         "weight": 20

@@ -42,6 +42,13 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
                 .define('A', ModItems.BLACK_OPAL.get())
                 .unlockedBy("has_black_opal", has(ModItems.BLACK_OPAL.get())).save(recipeOutput);
 
+        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModBlocks.PINK_GARNET_BLOCK.get())
+                .pattern("AAA")
+                .pattern("AAA")
+                .pattern("AAA")
+                .define('A', ModItems.PINK_GARNET.get())
+                .unlockedBy("has_pink_garnet", has(ModItems.PINK_GARNET.get())).save(recipeOutput);
+
         ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModItems.BLACK_OPAL_BOOTS.get())
                 .pattern("   ")
                 .pattern("A A")
@@ -76,6 +83,13 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
                 .pattern("AAA")
                 .define('A', ModItems.BISMUTH.get())
                 .unlockedBy("has_bismuth", has(ModItems.BISMUTH.get())).save(recipeOutput);
+
+        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModBlocks.RUBY_BLOCK.get())
+                .pattern("AAA")
+                .pattern("AAA")
+                .pattern("AAA")
+                .define('A', ModItems.RUBY_INGOT.get())
+                .unlockedBy("has_ruby", has(ModItems.RUBY_INGOT.get())).save(recipeOutput);
 
         ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModItems.ENDER_SPIKE_SPEAR.get())
                 .pattern(" B ")
@@ -200,6 +214,14 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
         ShapelessRecipeBuilder.shapeless(RecipeCategory.MISC, ModItems.BISMUTH.get(), 9)
                 .requires(ModBlocks.BISMUTH_BLOCK.get())
                 .unlockedBy("has_bismuth_block", has(ModBlocks.BISMUTH_BLOCK.get())).save(recipeOutput);
+
+        ShapelessRecipeBuilder.shapeless(RecipeCategory.MISC, ModItems.RUBY_INGOT.get(), 9)
+                .requires(ModBlocks.RUBY_BLOCK.get())
+                .unlockedBy("has_bismuth_block", has(ModBlocks.RUBY_BLOCK.get())).save(recipeOutput);
+
+        ShapelessRecipeBuilder.shapeless(RecipeCategory.MISC, ModItems.PINK_GARNET.get(), 9)
+                .requires(ModBlocks.PINK_GARNET_BLOCK.get())
+                .unlockedBy("has_pink_garnet_block", has(ModBlocks.PINK_GARNET_BLOCK.get())).save(recipeOutput);
 
 
         oreBlasting(recipeOutput, BISMUTH_SMELTABLES, RecipeCategory.MISC, ModItems.BISMUTH.get(), 0.25f ,200, "bismuth");

@@ -7,6 +7,7 @@ import net.icedly.netherend.item.ModCreativeModeTabs;
 import net.icedly.netherend.item.ModItems;
 import net.icedly.netherend.worldgen.biome.ModBiomes;
 import net.icedly.netherend.worldgen.biome.ModSurfaceRules;
+import net.neoforged.neoforge.client.event.RegisterMenuScreensEvent;
 import org.slf4j.Logger;
 
 import com.mojang.logging.LogUtils;
@@ -59,6 +60,7 @@ public class EndandNether {
 
         ModArmorMaterials.register(modEventBus);
 
+
         // Register the Deferred Register to the mod event bus so blocks get registered
 
         // Register ourselves for server and other game events we are interested in.
@@ -74,15 +76,15 @@ public class EndandNether {
     }
 
     private void commonSetup(FMLCommonSetupEvent event) {
-      event.enqueueWork(() -> {
+        event.enqueueWork(() -> {
 
-          ModBiomes.registerBiomes();
+            ModBiomes.registerBiomes();
 
-          SurfaceRuleManager.addSurfaceRules(SurfaceRuleManager.RuleCategory.NETHER, MOD_ID, ModSurfaceRules.makeGlowstonePlainsRules());
-          SurfaceRuleManager.addSurfaceRules(SurfaceRuleManager.RuleCategory.END, MOD_ID, ModSurfaceRules.makeEndRotRules());
-          SurfaceRuleManager.addSurfaceRules(SurfaceRuleManager.RuleCategory.END, MOD_ID, ModSurfaceRules.makeEndDunesRules());
+            SurfaceRuleManager.addSurfaceRules(SurfaceRuleManager.RuleCategory.NETHER, MOD_ID, ModSurfaceRules.makeGlowstonePlainsRules());
+            SurfaceRuleManager.addSurfaceRules(SurfaceRuleManager.RuleCategory.END, MOD_ID, ModSurfaceRules.makeEndRotRules());
+            SurfaceRuleManager.addSurfaceRules(SurfaceRuleManager.RuleCategory.END, MOD_ID, ModSurfaceRules.makeEndDunesRules());
 
-      });
+        });
 
         if (Config.LOG_DIRT_BLOCK.getAsBoolean()) {
             LOGGER.info("DIRT BLOCK >> {}", BuiltInRegistries.BLOCK.getKey(Blocks.DIRT));

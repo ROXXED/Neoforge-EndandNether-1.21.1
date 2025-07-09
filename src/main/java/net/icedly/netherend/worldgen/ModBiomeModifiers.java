@@ -23,6 +23,7 @@ public class ModBiomeModifiers {
     public static final ResourceKey<BiomeModifier> ADD_NETHER_RUBY_ORE =registerKey("add_nether_nether_ore");
     public static final ResourceKey<BiomeModifier> ADD_END_BLACK_OPAL_ORE =registerKey("add_black_opal_ore");
     public static final ResourceKey<BiomeModifier> ADD_END_BISMUTH_ORE =registerKey("add_bismuth_ore");
+    public static final ResourceKey<BiomeModifier> ADD_PINK_GARNET_ORE =registerKey("add_pink_garnet_ore");
 
     public static void bootstrap(BootstrapContext<BiomeModifier> context) {
         var placedFeatures = context.lookup(Registries.PLACED_FEATURE);
@@ -59,6 +60,11 @@ public class ModBiomeModifiers {
         context.register(ADD_END_BISMUTH_ORE, new BiomeModifiers.AddFeaturesBiomeModifier(
                 biomes.getOrThrow(BiomeTags.IS_END),
                 HolderSet.direct(placedFeatures.getOrThrow(ModPlacedFeatures.END_BISMUTH_ORE_PLACED_KEY)),
+                GenerationStep.Decoration.UNDERGROUND_ORES));
+
+        context.register(ADD_PINK_GARNET_ORE, new BiomeModifiers.AddFeaturesBiomeModifier(
+                biomes.getOrThrow(BiomeTags.IS_END),
+                HolderSet.direct(placedFeatures.getOrThrow(ModPlacedFeatures.END_PINK_GARNET_ORE_PLACED_KEY)),
                 GenerationStep.Decoration.UNDERGROUND_ORES));
 
     }

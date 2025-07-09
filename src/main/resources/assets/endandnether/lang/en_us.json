@@ -10,6 +10,9 @@
   "item.endandnether.skull_end_artifact": "Skull End Artifact",
   "item.endandnether.ender_spike_stick": "Ender Spike Stick",
   "item.endandnether.ender_spike_spear": "Ender Spike Spear",
+  "item.endandnether.starlight_ashes": "Starlight Ashes",
+  "item.endandnether.raw_pink_garnet": "Raw Pink Garnet",
+  "item.endandnether.pink_garnet": "Pink Garnet",
 
   "item.endandnether.black_opal_sword": "Black Opal Sword",
   "item.endandnether.black_opal_pickaxe": "Black Opal Pickaxe",
@@ -49,6 +52,11 @@
   "block.endandnether.hellbark_leaves": "Hellbark Leaves",
   "block.endandnether.rotted_end_stone": "Rotted End Stone",
   "block.endandnether.end_sand": "End Sand",
+  "block.endandnether.pink_garnet_block": "Block Of Pink Garnet",
+  "block.endandnether.raw_pink_garnet_block": "Raw Block Of Pink Garnet",
+  "block.endandnether.pink_garnet_end_ore": "Pink Garnet Ore",
+
+  "block.endandnether.growth_chamber": "Growth Chamber",
 
   "block.endandnether.hellbark_sapling": "Hellbark Sapling",
 

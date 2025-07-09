@@ -25,12 +25,9 @@ public class ModSurfaceRules {
     private static final SurfaceRules.RuleSource BEDROCK = makeStateRule(Blocks.BEDROCK);
 
 
-    public static SurfaceRules.RuleSource makeKaupenValleyRules() {
-        return SurfaceRules.sequence(
-                SurfaceRules.ifTrue(SurfaceRules.isBiome(ModBiomes.KAUPEN_VALLEY),
-                        SurfaceRules.sequence(SurfaceRules.ifTrue(SurfaceRules.UNDER_FLOOR, NETHERRACK), BLUE_TERRACOTTA))
-                // Default to green terracotta
-        );
+    public static SurfaceRules.RuleSource makeEerieValleyRules() {
+        return SurfaceRules.sequence();
+
     }
 
     public static SurfaceRules.RuleSource makeGlowstonePlainsRules() {

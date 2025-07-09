@@ -1,4 +1,4 @@
-// 1.21.1	2025-07-09T18:49:04.6627937	Loot Tables
+// 1.21.1	2025-07-10T04:15:57.0071942	Loot Tables
 2691df6ea1d7ec190eb2786b7aa0bbf53171289d data/endandnether/loot_table/blocks/bismuth_block.json
 4b51ef8bb373cf530b9c81d2e4f8ae8b98c0b3b7 data/endandnether/loot_table/blocks/bismuth_end_ore.json
 3c74233114ac195afeb1347fc4dce2ef693aa295 data/endandnether/loot_table/blocks/black_opal_block.json
@@ -9,7 +9,10 @@ a504ed37a6e44dd0c7e38f7c4ad220082dc53b53 data/endandnether/loot_table/blocks/hel
 bfd1dbad369d13b07c83768de6024bceee3fecf7 data/endandnether/loot_table/blocks/hellbark_planks.json
 08a9365f7d6bd9eb25f8329f690ac1a0c873a793 data/endandnether/loot_table/blocks/hellbark_sapling.json
 809812fc5c0278952ce60aa79f9ec2afb3a5e78d data/endandnether/loot_table/blocks/hellbark_wood.json
+baf6c87c15a41c6cff7be6985496b4d50145948f data/endandnether/loot_table/blocks/pink_garnet_block.json
+360e53439aa7160199862967c19a8c79db59f350 data/endandnether/loot_table/blocks/pink_garnet_end_ore.json
 5fadd55b58a973e874ac36f2114df9982e8c729f data/endandnether/loot_table/blocks/raw_black_opal_block.json
+fd009588d4c54cefcf47300a5d21318944fb5e48 data/endandnether/loot_table/blocks/raw_pink_garnet_block.json
 d0dbc14a9260e4284edb4267e574a308b40ae487 data/endandnether/loot_table/blocks/rotted_end_stone.json
 c32c1ad0eb5c19cb9e94e28e6d74c98c27bd3499 data/endandnether/loot_table/blocks/ruby_block.json
 b75f772097d7af59defed252e71d8b8c190e551c data/endandnether/loot_table/blocks/ruby_nether_ore.json

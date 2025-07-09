@@ -69,6 +69,12 @@ public class ModCreativeModeTabs {
                         pOutput.accept(ModItems.BISMUTH_PICKAXE);
                         pOutput.accept(ModItems.BISMUTH_SHOVEL);
                         pOutput.accept(ModItems.BISMUTH_HAMMER);
+                        pOutput.accept(ModItems.STARLIGHT_ASHES);
+                        pOutput.accept(ModItems.RAW_PINK_GARNET);
+                        pOutput.accept(ModItems.PINK_GARNET);
+                        pOutput.accept(ModBlocks.PINK_GARNET_BLOCK);
+                        pOutput.accept(ModBlocks.RAW_PINK_GARNET_BLOCK);
+                        pOutput.accept(ModBlocks.PINK_GARNET_END_ORE);
 
 
                         pOutput.accept(ModItems.BLACK_OPAL_HELMET);

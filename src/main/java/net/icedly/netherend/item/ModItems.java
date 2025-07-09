@@ -1,6 +1,7 @@
 package net.icedly.netherend.item;
 
 import net.icedly.netherend.EndandNether;
+import net.icedly.netherend.item.custom.FuelItem;
 import net.icedly.netherend.item.custom.HammerItem;
 import net.icedly.netherend.item.custom.PaxelItem;
 import net.minecraft.world.item.*;
@@ -43,6 +44,14 @@ public class ModItems {
     public static final DeferredItem<Item> ENDER_SPIKE_SPEAR =
             ITEMS.registerItem("ender_spike_spear",
             Item::new, new Item.Properties());
+    public static final DeferredItem<Item> PINK_GARNET =
+            ITEMS.registerItem("pink_garnet",
+            Item::new, new Item.Properties());
+    public static final DeferredItem<Item> RAW_PINK_GARNET =
+            ITEMS.registerItem("raw_pink_garnet",
+            Item::new, new Item.Properties());
+    public static final DeferredItem<Item> STARLIGHT_ASHES = ITEMS.register("starlight_ashes",
+            () -> new FuelItem(new Item.Properties(), 1200));
 
     public static final DeferredItem<Item> BLACK_OPAL_SWORD =
             ITEMS.register("black_opal_sword",

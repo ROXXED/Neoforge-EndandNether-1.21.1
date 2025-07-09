@@ -21,6 +21,8 @@ public class ModBlockStateProvider extends BlockStateProvider {
     protected void registerStatesAndModels() {
         blockWithItem(ModBlocks.BLACK_OPAL_BLOCK);
         blockWithItem(ModBlocks.BISMUTH_BLOCK);
+        blockWithItem(ModBlocks.PINK_GARNET_BLOCK);
+        blockWithItem(ModBlocks.RAW_PINK_GARNET_BLOCK);
         blockWithItem(ModBlocks.RUBY_BLOCK);
         blockWithItem(ModBlocks.ROTTED_END_STONE);
         blockWithItem(ModBlocks.END_SAND);
@@ -29,6 +31,7 @@ public class ModBlockStateProvider extends BlockStateProvider {
         blockWithItem(ModBlocks.BISMUTH_END_ORE);
         blockWithItem(ModBlocks.SULFUR_NETHER_ORE);
         blockWithItem(ModBlocks.RUBY_NETHER_ORE);
+        blockWithItem(ModBlocks.PINK_GARNET_END_ORE);
 
         logBlock(((RotatedPillarBlock) ModBlocks.HELLBARK_LOG.get()));
         axisBlock(((RotatedPillarBlock) ModBlocks.HELLBARK_WOOD.get()), blockTexture(ModBlocks.HELLBARK_LOG.get()), blockTexture(ModBlocks.HELLBARK_LOG.get()));
@@ -41,6 +44,7 @@ public class ModBlockStateProvider extends BlockStateProvider {
         blockItem(ModBlocks.HELLBARK_WOOD);
         blockItem(ModBlocks.STRIPPED_HELLBARK_LOG);
         blockItem(ModBlocks.STRIPPED_HELLBARK_WOOD);
+
 
         blockWithItem(ModBlocks.HELLBARK_PLANKS);
 

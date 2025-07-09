@@ -1,6 +1,6 @@
-// 1.21.1	2025-07-09T18:49:04.6607946	Tags for minecraft:block mod id endandnether
+// 1.21.1	2025-07-10T04:15:57.0061952	Tags for minecraft:block mod id endandnether
 82362cfbd1836db13c7e9d36c8712821e795ac55 data/endandnether/tags/block/mineable/paxel.json
 f3fc59ac5eb882f5e14e134a699f94a9a794ef7c data/minecraft/tags/block/logs.json
-15603738925d51a320e923919a15df6ad4bdce14 data/minecraft/tags/block/mineable/pickaxe.json
-518bbb0947f436b536f85b926b5d6bee1a815f65 data/minecraft/tags/block/needs_diamond_tool.json
+8306b4c7ba51dbc933cb94e24a2fc5186d8f096e data/minecraft/tags/block/mineable/pickaxe.json
+a88d202af20d099d375ed9a15a642672b304b5cb data/minecraft/tags/block/needs_diamond_tool.json
 92c4cf751d5c86afe74c50078af0a3b638fd659b data/minecraft/tags/block/needs_iron_tool.json

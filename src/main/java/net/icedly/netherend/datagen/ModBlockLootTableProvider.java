@@ -28,12 +28,15 @@ public class ModBlockLootTableProvider extends BlockLootSubProvider {
         dropSelf(ModBlocks.ROTTED_END_STONE.get());
         dropSelf(ModBlocks.END_SAND.get());
         dropSelf(ModBlocks.RAW_BLACK_OPAL_BLOCK.get());
+        dropSelf(ModBlocks.PINK_GARNET_BLOCK.get());
+        dropSelf(ModBlocks.RAW_PINK_GARNET_BLOCK.get());
         this.dropSelf(ModBlocks.HELLBARK_LOG.get());
         this.dropSelf(ModBlocks.HELLBARK_WOOD.get());
         this.dropSelf(ModBlocks.HELLBARK_PLANKS.get());
         this.dropSelf(ModBlocks.HELLBARK_SAPLING.get());
         this.dropSelf(ModBlocks.STRIPPED_HELLBARK_LOG.get());
         this.dropSelf(ModBlocks.STRIPPED_HELLBARK_WOOD.get());
+
 
         this.add(ModBlocks.HELLBARK_LEAVES.get(), block ->
                 createLeavesDrops(block, ModBlocks.HELLBARK_SAPLING.get(), NORMAL_LEAVES_SAPLING_CHANCES));
@@ -46,6 +49,8 @@ public class ModBlockLootTableProvider extends BlockLootSubProvider {
                 block -> createOreDrop(ModBlocks.SULFUR_NETHER_ORE.get(), ModItems.RAW_SULFUR.get()));
         this.add(ModBlocks.RUBY_NETHER_ORE.get(),
                 block -> createOreDrop(ModBlocks.RUBY_NETHER_ORE.get(), ModItems.RAW_RUBY.get()));
+        this.add(ModBlocks.PINK_GARNET_END_ORE.get(),
+                block -> createOreDrop(ModBlocks.PINK_GARNET_END_ORE.get(), ModItems.RAW_PINK_GARNET.get()));
 
     }
 

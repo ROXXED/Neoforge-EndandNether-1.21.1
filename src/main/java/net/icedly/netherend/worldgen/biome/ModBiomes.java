@@ -12,7 +12,6 @@ import terrablender.api.EndBiomeRegistry;
 import terrablender.api.Regions;
 
 public class ModBiomes {
-    public static final ResourceKey<Biome> KAUPEN_VALLEY = registerBiomeKey("kaupen_valley");
     public static final ResourceKey<Biome> GLOWSTONE_PLAIN = registerBiomeKey("glowstone_plain");
     public static final ResourceKey<Biome> END_ROT = registerBiomeKey("end_rot");
     public static final ResourceKey<Biome> END_DUNES = registerBiomeKey("end_dunes");
@@ -21,7 +20,8 @@ public class ModBiomes {
         Regions.register(new OverworldRegion(ResourceLocation.fromNamespaceAndPath(EndandNether.MOD_ID, "endandnether_overworld"), 20));
         Regions.register(new NetherRegion(ResourceLocation.fromNamespaceAndPath(EndandNether.MOD_ID, "endandnether_nether"), 20));
 
-        EndBiomeRegistry.registerHighlandsBiome(END_ROT, 20);
+        EndBiomeRegistry.registerEdgeBiome(END_ROT, 20);
+
         EndBiomeRegistry.registerHighlandsBiome(END_DUNES, 20);
     }
 
@@ -29,7 +29,6 @@ public class ModBiomes {
         var carver = context.lookup(Registries.CONFIGURED_CARVER);
         var placedFeatures = context.lookup(Registries.PLACED_FEATURE);
 
-        register(context, KAUPEN_VALLEY, ModOverworldBiomes.kaupenValley(placedFeatures, carver));
         register(context, GLOWSTONE_PLAIN, ModNetherBiomes.glowstonePlains(placedFeatures, carver));
         register(context, END_ROT, ModEndBiomes.endRot(placedFeatures, carver));
         register(context, END_DUNES, ModEndBiomes.endDunes(placedFeatures, carver));

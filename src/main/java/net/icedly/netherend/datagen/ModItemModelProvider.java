@@ -54,6 +54,9 @@ public class ModItemModelProvider extends ItemModelProvider {
         basicItem(ModItems.SKULL_END_ARTIFACT.get());
         basicItem(ModItems.ENDER_SPIKE_STICK.get());
         basicItem(ModItems.ENDER_SPIKE_SPEAR.get());
+        basicItem(ModItems.STARLIGHT_ASHES.get());
+        basicItem(ModItems.PINK_GARNET.get());
+        basicItem(ModItems.RAW_PINK_GARNET.get());
 
         trimmedArmorItem(ModItems.BLACK_OPAL_BOOTS);
         trimmedArmorItem(ModItems.BLACK_OPAL_HELMET);

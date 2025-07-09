@@ -34,6 +34,7 @@ public class ModConfiguredFeatures {
     public static final ResourceKey<ConfiguredFeature<?, ?>> NETHER_RUBY_ORE_KEY = registerKey("ruby_ore");
     public static final ResourceKey<ConfiguredFeature<?, ?>> END_BLACK_OPAL_ORE_KEY = registerKey("black_opal_ore");
     public static final ResourceKey<ConfiguredFeature<?, ?>> END_BISMUTH_ORE_KEY = registerKey("bismuth_ore");
+    public static final ResourceKey<ConfiguredFeature<?, ?>> END_PINK_GARNET_ORE_KEY = registerKey("pink_garnet_ore");
 
 
     public static void bootstrap(BootstrapContext<ConfiguredFeature<?, ?>> context) {
@@ -61,6 +62,9 @@ public class ModConfiguredFeatures {
 
         register(context, END_BISMUTH_ORE_KEY, Feature.ORE, new OreConfiguration(endReplaceables,
                 ModBlocks.BISMUTH_END_ORE.get().defaultBlockState(),9));
+
+        register(context, END_PINK_GARNET_ORE_KEY, Feature.ORE, new OreConfiguration(endReplaceables,
+                ModBlocks.PINK_GARNET_END_ORE.get().defaultBlockState(),6));
 
     }
 
