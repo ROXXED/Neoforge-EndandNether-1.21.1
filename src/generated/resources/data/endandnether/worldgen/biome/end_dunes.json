@@ -1,5 +1,11 @@
 {
-  "carvers": {},
+  "carvers": {
+    "air": [
+      "minecraft:cave",
+      "minecraft:cave_extra_underground",
+      "minecraft:canyon"
+    ]
+  },
   "downfall": 0.0,
   "effects": {
     "ambient_sound": "minecraft:ambient.soul_sand_valley.loop",
@@ -28,11 +34,18 @@
   },
   "features": [
     [],
+    [
+      "minecraft:lake_lava_underground",
+      "minecraft:lake_lava_surface"
+    ],
     [],
     [],
     [],
     [],
     [],
+    [
+      "minecraft:chorus_plant"
+    ],
     [],
     [
       "minecraft:chorus_plant"
@@ -43,7 +56,14 @@
   "spawners": {
     "ambient": [],
     "axolotls": [],
-    "creature": [],
+    "creature": [
+      {
+        "type": "minecraft:enderman",
+        "maxCount": 3,
+        "minCount": 2,
+        "weight": 20
+      }
+    ],
     "misc": [],
     "monster": [],
     "underground_water_creature": [],

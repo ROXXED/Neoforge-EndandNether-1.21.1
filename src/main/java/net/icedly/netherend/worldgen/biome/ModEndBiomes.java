@@ -2,11 +2,15 @@ package net.icedly.netherend.worldgen.biome;
 
 import net.minecraft.core.HolderGetter;
 import net.minecraft.core.particles.ParticleTypes;
+import net.minecraft.data.worldgen.BiomeDefaultFeatures;
+import net.minecraft.data.worldgen.placement.AquaticPlacements;
 import net.minecraft.data.worldgen.placement.EndPlacements;
 import net.minecraft.resources.ResourceKey;
 import net.minecraft.sounds.Musics;
 import net.minecraft.sounds.SoundEvents;
 import net.minecraft.util.Mth;
+import net.minecraft.world.entity.EntityType;
+import net.minecraft.world.entity.MobCategory;
 import net.minecraft.world.level.biome.*;
 import net.minecraft.world.level.levelgen.GenerationStep;
 import net.minecraft.world.level.levelgen.carver.ConfiguredWorldCarver;
@@ -39,10 +43,15 @@ public class ModEndBiomes {
         // Mob spawns
         MobSpawnSettings.Builder spawnBuilder = new MobSpawnSettings.Builder();
 
+        spawnBuilder.addSpawn(MobCategory.CREATURE, new MobSpawnSettings.SpawnerData(EntityType.ENDERMAN, 20, 2, 3));
+
         // Biome features
         BiomeGenerationSettings.Builder biomeBuilder = new BiomeGenerationSettings.Builder(placedFeatureGetter, carverGetter);
 
+        BiomeDefaultFeatures.addDefaultCarversAndLakes(biomeBuilder);
         addFeature(biomeBuilder, GenerationStep.Decoration.UNDERGROUND_DECORATION, EndPlacements.CHORUS_PLANT);
+        addFeature(biomeBuilder, GenerationStep.Decoration.VEGETAL_DECORATION, EndPlacements.CHORUS_PLANT);
+
 
         return new Biome.BiomeBuilder()
                 .hasPrecipitation(false).temperature(4.0F).downfall(0.0F)
@@ -51,6 +60,7 @@ public class ModEndBiomes {
                         .ambientLoopSound(SoundEvents.AMBIENT_SOUL_SAND_VALLEY_LOOP
                         ).ambientMoodSound(new AmbientMoodSettings(SoundEvents.AMBIENT_BASALT_DELTAS_MOOD, 90000, 8, 2.0D))
                         .backgroundMusic(Musics.createGameMusic(SoundEvents.AMBIENT_SOUL_SAND_VALLEY_LOOP)).build())
+
                 .mobSpawnSettings(spawnBuilder.build()).generationSettings(biomeBuilder.build()).build();
     }
 

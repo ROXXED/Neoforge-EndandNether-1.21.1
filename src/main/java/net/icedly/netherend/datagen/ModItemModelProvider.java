@@ -26,6 +26,9 @@ public class ModItemModelProvider extends ItemModelProvider {
         basicItem(ModItems.RUBY_INGOT.get());
         basicItem(ModItems.RAW_BISMUTH.get());
         basicItem(ModItems.BISMUTH.get());
+        basicItem(ModItems.SKULL_END_ARTIFACT.get());
+        basicItem(ModItems.ENDER_SPIKE_STICK.get());
+        basicItem(ModItems.ENDER_SPIKE_SPEAR.get());
 
 
         saplingItem(ModBlocks.HELLBARK_SAPLING);

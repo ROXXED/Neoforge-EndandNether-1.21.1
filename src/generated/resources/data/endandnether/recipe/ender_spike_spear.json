@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "A": {
+      "item": "endandnether:ender_spike_stick"
+    },
+    "B": {
+      "item": "minecraft:end_stone"
+    }
+  },
+  "pattern": [
+    " B ",
+    " A ",
+    " A "
+  ],
+  "result": {
+    "count": 1,
+    "id": "endandnether:ender_spike_spear"
+  }
+}

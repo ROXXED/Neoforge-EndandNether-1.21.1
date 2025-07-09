@@ -8,6 +8,7 @@ import net.minecraft.data.PackOutput;
 import net.minecraft.data.recipes.*;
 import net.minecraft.world.item.crafting.*;
 import net.minecraft.world.level.ItemLike;
+import net.minecraft.world.level.block.Blocks;
 import net.neoforged.neoforge.common.conditions.IConditionBuilder;
 
 import java.util.List;
@@ -39,6 +40,16 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
                 .pattern("AAA")
                 .define('A', ModItems.BLACK_OPAL.get())
                 .unlockedBy("has_black_opal", has(ModItems.BLACK_OPAL.get())).save(recipeOutput);
+
+
+        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModItems.ENDER_SPIKE_SPEAR.get())
+                .pattern(" B ")
+                .pattern(" A ")
+                .pattern(" A ")
+                .define('A', ModItems.ENDER_SPIKE_STICK.get())
+                .define('B', Blocks.END_STONE.asItem())
+                .unlockedBy("has_black_opal", has(ModItems.ENDER_SPIKE_STICK.get())).save(recipeOutput);
+
 
 
         ShapelessRecipeBuilder.shapeless(RecipeCategory.MISC, ModItems.BLACK_OPAL.get(), 9)

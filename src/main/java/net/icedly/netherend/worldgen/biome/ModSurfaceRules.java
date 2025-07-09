@@ -28,9 +28,8 @@ public class ModSurfaceRules {
     public static SurfaceRules.RuleSource makeKaupenValleyRules() {
         return SurfaceRules.sequence(
                 SurfaceRules.ifTrue(SurfaceRules.isBiome(ModBiomes.KAUPEN_VALLEY),
-                        SurfaceRules.sequence(SurfaceRules.ifTrue(SurfaceRules.UNDER_FLOOR, RED_TERRACOTTA), BLUE_TERRACOTTA)),
+                        SurfaceRules.sequence(SurfaceRules.ifTrue(SurfaceRules.UNDER_FLOOR, NETHERRACK), BLUE_TERRACOTTA))
                 // Default to green terracotta
-                SurfaceRules.ifTrue(SurfaceRules.ON_FLOOR, GREEN_TERRACOTTA)
         );
     }
 

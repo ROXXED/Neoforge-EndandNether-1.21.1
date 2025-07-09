@@ -1,10 +1,14 @@
 package net.icedly.netherend.item;
 
 import net.icedly.netherend.EndandNether;
+import net.minecraft.client.renderer.item.ItemProperties;
+import net.minecraft.world.entity.projectile.ThrowableItemProjectile;
 import net.minecraft.world.item.Item;
 import net.neoforged.bus.api.IEventBus;
 import net.neoforged.neoforge.registries.DeferredItem;
 import net.neoforged.neoforge.registries.DeferredRegister;
+
+import java.util.logging.Level;
 
 public class ModItems {
     public static final DeferredRegister.Items ITEMS = DeferredRegister.createItems(EndandNether.MOD_ID);
@@ -31,6 +35,15 @@ public class ModItems {
             Item::new, new Item.Properties());
     public static final DeferredItem<Item> BISMUTH =
             ITEMS.registerItem("bismuth",
+            Item::new, new Item.Properties());
+    public static final DeferredItem<Item> SKULL_END_ARTIFACT =
+            ITEMS.registerItem("skull_end_artifact",
+            Item::new, new Item.Properties());
+    public static final DeferredItem<Item> ENDER_SPIKE_STICK =
+            ITEMS.registerItem("ender_spike_stick",
+            Item::new, new Item.Properties());
+    public static final DeferredItem<Item> ENDER_SPIKE_SPEAR =
+            ITEMS.registerItem("ender_spike_spear",
             Item::new, new Item.Properties());
 
     public static void register(IEventBus eventBus) {

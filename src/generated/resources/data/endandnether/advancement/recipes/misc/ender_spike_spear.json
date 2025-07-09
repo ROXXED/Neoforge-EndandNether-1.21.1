@@ -1,0 +1,32 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_black_opal": {
+      "conditions": {
+        "items": [
+          {
+            "items": "endandnether:ender_spike_stick"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "endandnether:ender_spike_spear"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    }
+  },
+  "requirements": [
+    [
+      "has_the_recipe",
+      "has_black_opal"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "endandnether:ender_spike_spear"
+    ]
+  }
+}

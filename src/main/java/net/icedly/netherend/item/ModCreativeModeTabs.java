@@ -52,6 +52,9 @@ public class ModCreativeModeTabs {
                         pOutput.accept(ModBlocks.BLACK_OPAL_BLOCK);
                         pOutput.accept(ModBlocks.ROTTED_END_STONE);
                         pOutput.accept(ModBlocks.END_SAND);
+                        pOutput.accept(ModItems.SKULL_END_ARTIFACT);
+                        pOutput.accept(ModItems.ENDER_SPIKE_STICK);
+                        pOutput.accept(ModItems.ENDER_SPIKE_SPEAR);
 
                     }).build());
 
