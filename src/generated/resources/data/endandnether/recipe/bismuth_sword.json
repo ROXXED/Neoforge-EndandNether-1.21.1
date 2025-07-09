@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "A": {
+      "item": "minecraft:stick"
+    },
+    "B": {
+      "item": "endandnether:bismuth"
+    }
+  },
+  "pattern": [
+    " B ",
+    " B ",
+    " A "
+  ],
+  "result": {
+    "count": 1,
+    "id": "endandnether:bismuth_sword"
+  }
+}

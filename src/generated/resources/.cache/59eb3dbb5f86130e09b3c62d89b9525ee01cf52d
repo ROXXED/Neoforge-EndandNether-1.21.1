@@ -1,4 +1,5 @@
-// 1.21.1	2025-07-08T17:23:23.0482001	Loot Tables
+// 1.21.1	2025-07-09T18:49:04.6627937	Loot Tables
+2691df6ea1d7ec190eb2786b7aa0bbf53171289d data/endandnether/loot_table/blocks/bismuth_block.json
 4b51ef8bb373cf530b9c81d2e4f8ae8b98c0b3b7 data/endandnether/loot_table/blocks/bismuth_end_ore.json
 3c74233114ac195afeb1347fc4dce2ef693aa295 data/endandnether/loot_table/blocks/black_opal_block.json
 01021c230df2df9625cf32f7122f8a0acfaf4ce0 data/endandnether/loot_table/blocks/black_opal_end_ore.json

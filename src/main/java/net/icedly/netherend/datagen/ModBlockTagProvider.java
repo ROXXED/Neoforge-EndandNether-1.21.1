@@ -2,6 +2,7 @@ package net.icedly.netherend.datagen;
 
 import net.icedly.netherend.EndandNether;
 import net.icedly.netherend.block.ModBlocks;
+import net.icedly.netherend.util.ModTags;
 import net.minecraft.core.HolderLookup;
 import net.minecraft.data.PackOutput;
 import net.minecraft.tags.BlockTags;
@@ -20,8 +21,8 @@ public class ModBlockTagProvider extends BlockTagsProvider {
     protected void addTags(HolderLookup.Provider provider) {
         this.tag(BlockTags.MINEABLE_WITH_PICKAXE)
                 .add(ModBlocks.BLACK_OPAL_BLOCK.get())
+                .add(ModBlocks.BISMUTH_BLOCK.get())
                 .add(ModBlocks.ROTTED_END_STONE.get())
-                .add(ModBlocks.END_SAND.get())
                 .add(ModBlocks.SULFUR_NETHER_ORE.get())
                 .add(ModBlocks.RUBY_NETHER_ORE.get())
                 .add(ModBlocks.RAW_BLACK_OPAL_BLOCK.get())
@@ -34,6 +35,7 @@ public class ModBlockTagProvider extends BlockTagsProvider {
 
         this.tag(BlockTags.NEEDS_DIAMOND_TOOL)
                 .add(ModBlocks.BLACK_OPAL_BLOCK.get())
+                .add(ModBlocks.BISMUTH_BLOCK.get())
                 .add(ModBlocks.RAW_BLACK_OPAL_BLOCK.get())
                 .add(ModBlocks.BLACK_OPAL_END_ORE.get())
                 .add(ModBlocks.BISMUTH_END_ORE.get());
@@ -44,5 +46,10 @@ public class ModBlockTagProvider extends BlockTagsProvider {
                 .add(ModBlocks.HELLBARK_WOOD.get())
                 .add(ModBlocks.STRIPPED_HELLBARK_LOG.get())
                 .add(ModBlocks.STRIPPED_HELLBARK_WOOD.get());
+
+        this.tag(ModTags.Blocks.PAXEL_MINEABLE)
+                .addTag(BlockTags.MINEABLE_WITH_PICKAXE)
+                .addTag(BlockTags.MINEABLE_WITH_AXE)
+                .addTag(BlockTags.MINEABLE_WITH_SHOVEL);
     }
 }

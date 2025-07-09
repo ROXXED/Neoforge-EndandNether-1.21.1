@@ -1,6 +1,8 @@
 package net.icedly.netherend;
 
 import net.icedly.netherend.block.ModBlocks;
+import net.icedly.netherend.event.ModEvents;
+import net.icedly.netherend.item.ModArmorMaterials;
 import net.icedly.netherend.item.ModCreativeModeTabs;
 import net.icedly.netherend.item.ModItems;
 import net.icedly.netherend.worldgen.biome.ModBiomes;
@@ -55,7 +57,7 @@ public class EndandNether {
         ModItems.register(modEventBus);
         ModBlocks.register(modEventBus);
 
-
+        ModArmorMaterials.register(modEventBus);
 
         // Register the Deferred Register to the mod event bus so blocks get registered
 

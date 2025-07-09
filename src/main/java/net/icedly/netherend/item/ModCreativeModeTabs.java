@@ -48,6 +48,7 @@ public class ModCreativeModeTabs {
                         pOutput.accept(ModBlocks.BISMUTH_END_ORE);
                         pOutput.accept(ModItems.RAW_BLACK_OPAL);
                         pOutput.accept(ModBlocks.BLACK_OPAL_END_ORE);
+                        pOutput.accept(ModBlocks.BISMUTH_BLOCK);
                         pOutput.accept(ModBlocks.RAW_BLACK_OPAL_BLOCK);
                         pOutput.accept(ModBlocks.BLACK_OPAL_BLOCK);
                         pOutput.accept(ModBlocks.ROTTED_END_STONE);
@@ -55,6 +56,25 @@ public class ModCreativeModeTabs {
                         pOutput.accept(ModItems.SKULL_END_ARTIFACT);
                         pOutput.accept(ModItems.ENDER_SPIKE_STICK);
                         pOutput.accept(ModItems.ENDER_SPIKE_SPEAR);
+                        pOutput.accept(ModItems.BLACK_OPAL_SWORD);
+                        pOutput.accept(ModItems.BLACK_OPAL_AXE);
+                        pOutput.accept(ModItems.BLACK_OPAL_HOE);
+                        pOutput.accept(ModItems.BLACK_OPAL_PICKAXE);
+                        pOutput.accept(ModItems.BLACK_OPAL_PAXEL);
+                        pOutput.accept(ModItems.BLACK_OPAL_HAMMER);
+                        pOutput.accept(ModItems.BLACK_OPAL_SHOVEL);
+                        pOutput.accept(ModItems.BISMUTH_SWORD);
+                        pOutput.accept(ModItems.BISMUTH_HOE);
+                        pOutput.accept(ModItems.BISMUTH_AXE);
+                        pOutput.accept(ModItems.BISMUTH_PICKAXE);
+                        pOutput.accept(ModItems.BISMUTH_SHOVEL);
+                        pOutput.accept(ModItems.BISMUTH_HAMMER);
+
+
+                        pOutput.accept(ModItems.BLACK_OPAL_HELMET);
+                        pOutput.accept(ModItems.BLACK_OPAL_CHESTPLATE);
+                        pOutput.accept(ModItems.BLACK_OPAL_LEGGINGS);
+                        pOutput.accept(ModItems.BLACK_OPAL_BOOTS);
 
                     }).build());
 

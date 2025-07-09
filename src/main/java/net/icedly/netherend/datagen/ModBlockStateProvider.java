@@ -20,6 +20,7 @@ public class ModBlockStateProvider extends BlockStateProvider {
     @Override
     protected void registerStatesAndModels() {
         blockWithItem(ModBlocks.BLACK_OPAL_BLOCK);
+        blockWithItem(ModBlocks.BISMUTH_BLOCK);
         blockWithItem(ModBlocks.RUBY_BLOCK);
         blockWithItem(ModBlocks.ROTTED_END_STONE);
         blockWithItem(ModBlocks.END_SAND);

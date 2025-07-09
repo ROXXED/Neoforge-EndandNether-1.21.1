@@ -23,6 +23,7 @@ public class ModBlockLootTableProvider extends BlockLootSubProvider {
     @Override
     protected void generate() {
         dropSelf(ModBlocks.BLACK_OPAL_BLOCK.get());
+        dropSelf(ModBlocks.BISMUTH_BLOCK.get());
         dropSelf(ModBlocks.RUBY_BLOCK.get());
         dropSelf(ModBlocks.ROTTED_END_STONE.get());
         dropSelf(ModBlocks.END_SAND.get());

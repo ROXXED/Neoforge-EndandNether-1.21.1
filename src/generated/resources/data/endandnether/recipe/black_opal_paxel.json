@@ -1,0 +1,27 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "A": {
+      "item": "minecraft:stick"
+    },
+    "B": {
+      "item": "endandnether:black_opal_pickaxe"
+    },
+    "C": {
+      "item": "endandnether:black_opal_shovel"
+    },
+    "D": {
+      "item": "endandnether:black_opal_axe"
+    }
+  },
+  "pattern": [
+    "DBC",
+    " A ",
+    " A "
+  ],
+  "result": {
+    "count": 1,
+    "id": "endandnether:black_opal_paxel"
+  }
+}

@@ -22,6 +22,8 @@ public class ModBlocks {
 
     public static final DeferredBlock<Block> BLACK_OPAL_BLOCK = registerBlock("black_opal_block",
             () -> new Block(BlockBehaviour.Properties.of().strength(4f).requiresCorrectToolForDrops()));
+    public static final DeferredBlock<Block> BISMUTH_BLOCK = registerBlock("bismuth_block",
+            () -> new Block(BlockBehaviour.Properties.of().strength(4f).requiresCorrectToolForDrops()));
     public static final DeferredBlock<Block> ROTTED_END_STONE = registerBlock("rotted_end_stone",
             () -> new Block(BlockBehaviour.Properties.of().strength(4f)));
     public static final DeferredBlock<Block> END_SAND = registerBlock("end_sand",

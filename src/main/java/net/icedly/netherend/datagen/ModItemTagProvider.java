@@ -2,6 +2,7 @@ package net.icedly.netherend.datagen;
 
 import net.icedly.netherend.EndandNether;
 import net.icedly.netherend.block.ModBlocks;
+import net.icedly.netherend.item.ModItems;
 import net.minecraft.core.HolderLookup;
 import net.minecraft.data.PackOutput;
 import net.minecraft.data.tags.ItemTagsProvider;
@@ -30,5 +31,12 @@ public class ModItemTagProvider extends ItemTagsProvider {
 
         tag(ItemTags.PLANKS)
                 .add(ModBlocks.HELLBARK_PLANKS.get().asItem());
+
+
+        this.tag(ItemTags.TRIMMABLE_ARMOR)
+                .add(ModItems.BLACK_OPAL_HELMET.get())
+                .add(ModItems.BLACK_OPAL_CHESTPLATE.get())
+                .add(ModItems.BLACK_OPAL_LEGGINGS.get())
+                .add(ModItems.BLACK_OPAL_BOOTS.get());
     }
 }
