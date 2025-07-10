@@ -17,6 +17,7 @@ import net.minecraft.world.level.levelgen.feature.configurations.TreeConfigurati
 import net.minecraft.world.level.levelgen.feature.featuresize.TwoLayersFeatureSize;
 import net.minecraft.world.level.levelgen.feature.foliageplacers.BlobFoliagePlacer;
 import net.minecraft.world.level.levelgen.feature.stateproviders.BlockStateProvider;
+import net.minecraft.world.level.levelgen.feature.trunkplacers.ForkingTrunkPlacer;
 import net.minecraft.world.level.levelgen.feature.trunkplacers.StraightTrunkPlacer;
 import net.minecraft.world.level.levelgen.structure.templatesystem.BlockMatchTest;
 import net.minecraft.world.level.levelgen.structure.templatesystem.RuleTest;
@@ -41,10 +42,13 @@ public class ModConfiguredFeatures {
 
         register(context, HELLBARK_KEY, Feature.TREE, new TreeConfiguration.TreeConfigurationBuilder(
                 BlockStateProvider.simple(ModBlocks.HELLBARK_LOG.get()),
-                new StraightTrunkPlacer(2, 3, 1),
+                new ForkingTrunkPlacer(4, 4, 3),
+
                 BlockStateProvider.simple(ModBlocks.HELLBARK_LEAVES.get()),
-                new BlobFoliagePlacer(ConstantInt.of(3), ConstantInt.of(1), 2),
+                new BlobFoliagePlacer(ConstantInt.of(2), ConstantInt.of(3), 3),
+
                 new TwoLayersFeatureSize(1, 0, 2)).dirt(BlockStateProvider.simple(Blocks.NETHERRACK)).build());
+
 
 
 
@@ -61,10 +65,10 @@ public class ModConfiguredFeatures {
                 ModBlocks.BLACK_OPAL_END_ORE.get().defaultBlockState(),9));
 
         register(context, END_BISMUTH_ORE_KEY, Feature.ORE, new OreConfiguration(endReplaceables,
-                ModBlocks.BISMUTH_END_ORE.get().defaultBlockState(),9));
+                ModBlocks.BISMUTH_END_ORE.get().defaultBlockState(),6));
 
         register(context, END_PINK_GARNET_ORE_KEY, Feature.ORE, new OreConfiguration(endReplaceables,
-                ModBlocks.PINK_GARNET_END_ORE.get().defaultBlockState(),6));
+                ModBlocks.PINK_GARNET_END_ORE.get().defaultBlockState(),4));
 
     }
 

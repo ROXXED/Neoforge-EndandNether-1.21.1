@@ -7,16 +7,19 @@ import net.minecraft.world.level.block.SaplingBlock;
 import net.minecraft.world.level.block.grower.TreeGrower;
 import net.minecraft.world.level.block.state.BlockState;
 
-public class ModSaplingBlock extends SaplingBlock {
-    private Block block;
+import java.util.function.Supplier;
 
-    public ModSaplingBlock(TreeGrower treeGrower, Properties properties, Block block) {
+public class ModSaplingBlock extends SaplingBlock {
+    private final Supplier<Block> block;
+
+    public ModSaplingBlock(TreeGrower treeGrower, Properties properties, Supplier<Block> block) {
         super(treeGrower, properties);
         this.block = block;
     }
 
     @Override
-    protected boolean mayPlaceOn(BlockState state, BlockGetter level, BlockPos pos) {
-        return state.is(block);
+    protected boolean mayPlaceOn(BlockState pState, BlockGetter pLevel, BlockPos pPos) {
+        return pState.is(block.get());
     }
+
 }

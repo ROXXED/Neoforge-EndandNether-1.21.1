@@ -6,6 +6,7 @@ import net.minecraft.world.level.block.Blocks;
 import net.minecraft.world.level.levelgen.SurfaceRules;
 import net.minecraft.world.level.levelgen.VerticalAnchor;
 
+import static net.icedly.netherend.block.ModBlocks.DEEP_NETHERRACK;
 import static net.icedly.netherend.block.ModBlocks.ROTTED_END_STONE;
 
 public class ModSurfaceRules {
@@ -22,7 +23,9 @@ public class ModSurfaceRules {
 
     private static final SurfaceRules.RuleSource GLOWSTONE = makeStateRule(Blocks.GLOWSTONE);
     private static final SurfaceRules.RuleSource NETHERRACK = makeStateRule(Blocks.NETHERRACK);
+    private static final SurfaceRules.RuleSource DEEP_NETHERRACK = makeStateRule(ModBlocks.DEEP_NETHERRACK.get());
     private static final SurfaceRules.RuleSource BEDROCK = makeStateRule(Blocks.BEDROCK);
+    private static final SurfaceRules.RuleSource CRIMSON_NYLIUM = makeStateRule(Blocks.CRIMSON_NYLIUM);
 
 
     public static SurfaceRules.RuleSource makeEerieValleyRules() {
@@ -37,29 +40,23 @@ public class ModSurfaceRules {
 
                 // Then apply biome-specific rules
                 SurfaceRules.ifTrue(
-                        SurfaceRules.isBiome(ModBiomes.GLOWSTONE_PLAIN),
+                        SurfaceRules.isBiome(ModBiomes.HELLBARK_FOREST),
                         SurfaceRules.sequence(
                                 // Obsidian on the undersides of ceilings
-                                SurfaceRules.ifTrue(SurfaceRules.UNDER_CEILING, OBSIDIAN),
+                                SurfaceRules.ifTrue(SurfaceRules.UNDER_CEILING, NETHERRACK),
                                 // Obsidian on the undersides of floors (though less common in Nether caves)
-                                SurfaceRules.ifTrue(SurfaceRules.UNDER_FLOOR, GLOWSTONE),
-                                SurfaceRules.ifTrue(SurfaceRules.DEEP_UNDER_FLOOR, OBSIDIAN),
+                                SurfaceRules.ifTrue(SurfaceRules.UNDER_FLOOR, NETHERRACK),
+                                SurfaceRules.ifTrue(SurfaceRules.DEEP_UNDER_FLOOR, DEEP_NETHERRACK),
                                 // Default to glowstone if not under a ceiling or floor
-                                GLOWSTONE))
+                                NETHERRACK))
         );
-    }
 
-    public static SurfaceRules.RuleSource makeEndRotRules() {
-        return SurfaceRules.sequence(
-                SurfaceRules.ifTrue(SurfaceRules.isBiome(ModBiomes.END_ROT), ROTTED_END_STONE),
-                // Default to end stone
-                SurfaceRules.ifTrue(SurfaceRules.ON_FLOOR, ROTTED_END_STONE)
-        );
     }
     public static SurfaceRules.RuleSource makeEndDunesRules() {
         return SurfaceRules.sequence(
                 SurfaceRules.ifTrue(SurfaceRules.isBiome(ModBiomes.END_DUNES), END_SAND),
                 // Default to end stone
+                SurfaceRules.ifTrue(SurfaceRules.DEEP_UNDER_FLOOR, ROTTED_END_STONE),
                 SurfaceRules.ifTrue(SurfaceRules.ON_FLOOR, END_SAND)
         );
     }

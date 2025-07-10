@@ -28,6 +28,8 @@ public class ModBlocks {
             () -> new Block(BlockBehaviour.Properties.of().strength(4f).requiresCorrectToolForDrops()));
     public static final DeferredBlock<Block> BISMUTH_BLOCK = registerBlock("bismuth_block",
             () -> new Block(BlockBehaviour.Properties.of().strength(4f).requiresCorrectToolForDrops()));
+    public static final DeferredBlock<Block> DEEP_NETHERRACK = registerBlock("deep_netherrack",
+            () -> new Block(BlockBehaviour.Properties.of().strength(4f).requiresCorrectToolForDrops()));
     public static final DeferredBlock<Block> ROTTED_END_STONE = registerBlock("rotted_end_stone",
             () -> new Block(BlockBehaviour.Properties.of().strength(4f)));
     public static final DeferredBlock<Block> END_SAND = registerBlock("end_sand",
@@ -61,14 +63,17 @@ public class ModBlocks {
     public static final DeferredBlock<Block> STRIPPED_HELLBARK_WOOD = registerBlock("stripped_hellbark_wood",
             () -> new ModRotatedPillarBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.STRIPPED_CRIMSON_STEM)));
 
+    public static final DeferredBlock<Block> END_STONE_BRICK_PILLAR = registerBlock("end_stone_brick_pillar",
+            () -> new ModRotatedPillarBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.PURPUR_PILLAR)));
+
     public static final DeferredBlock<Block> HELLBARK_PLANKS = registerBlock("hellbark_planks",
             () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.CRIMSON_PLANKS)));
 
     public static final DeferredBlock<Block> HELLBARK_LEAVES = registerBlock("hellbark_leaves",
-            () -> new LeavesBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.WARPED_WART_BLOCK)));
+            () -> new LeavesBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.WARPED_WART_BLOCK).noOcclusion()));
 
     public static final DeferredBlock<Block> HELLBARK_SAPLING = registerBlock("hellbark_sapling",
-            () -> new ModSaplingBlock(ModTreeGrowers.HELLBARK, BlockBehaviour.Properties.ofFullCopy(Blocks.OAK_SAPLING), Blocks.NETHERRACK));
+            () -> new ModSaplingBlock(ModTreeGrowers.HELLBARK, BlockBehaviour.Properties.ofFullCopy(Blocks.OAK_SAPLING), () -> Blocks.NETHERRACK));
 
     private static <T extends Block>DeferredBlock<T> registerBlock(String name, Supplier<T> block) {
         DeferredBlock<T> toReturn = BLOCKS.register(name, block);

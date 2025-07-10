@@ -30,6 +30,8 @@ public class ModBlockLootTableProvider extends BlockLootSubProvider {
         dropSelf(ModBlocks.RAW_BLACK_OPAL_BLOCK.get());
         dropSelf(ModBlocks.PINK_GARNET_BLOCK.get());
         dropSelf(ModBlocks.RAW_PINK_GARNET_BLOCK.get());
+        dropSelf(ModBlocks.END_STONE_BRICK_PILLAR.get());
+        dropSelf(ModBlocks.DEEP_NETHERRACK.get());
         this.dropSelf(ModBlocks.HELLBARK_LOG.get());
         this.dropSelf(ModBlocks.HELLBARK_WOOD.get());
         this.dropSelf(ModBlocks.HELLBARK_PLANKS.get());

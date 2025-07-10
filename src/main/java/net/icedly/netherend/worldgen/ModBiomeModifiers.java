@@ -16,8 +16,8 @@ import net.neoforged.neoforge.common.world.BiomeModifiers;
 import net.neoforged.neoforge.registries.NeoForgeRegistries;
 
 public class ModBiomeModifiers {
-    public static final ResourceKey<BiomeModifier> ADD_TREE_HELLBARK = registerKey("add_tree_hellbark");
 
+    public static final ResourceKey<BiomeModifier> ADD_TREE_HELLBARK = registerKey("add_tree_hellbark");
 
     public static final ResourceKey<BiomeModifier> ADD_NETHER_SULFUR_ORE =registerKey("add_nether_sulfur_ore");
     public static final ResourceKey<BiomeModifier> ADD_NETHER_RUBY_ORE =registerKey("add_nether_nether_ore");
@@ -31,7 +31,7 @@ public class ModBiomeModifiers {
 
 
         context.register(ADD_TREE_HELLBARK, new BiomeModifiers.AddFeaturesBiomeModifier(
-                biomes.getOrThrow(BiomeTags.IS_NETHER),
+                HolderSet.direct(biomes.getOrThrow(Biomes.NETHER_WASTES), biomes.getOrThrow(Biomes.SOUL_SAND_VALLEY)),
                 HolderSet.direct(placedFeatures.getOrThrow(ModPlacedFeatures.HELLBARK_PLACED_KEY)),
                 GenerationStep.Decoration.VEGETAL_DECORATION));
     {

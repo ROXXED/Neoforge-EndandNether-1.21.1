@@ -5,11 +5,13 @@
     "endandnether:raw_pink_garnet_block",
     "endandnether:pink_garnet_block",
     "endandnether:rotted_end_stone",
+    "endandnether:deep_netherrack",
     "endandnether:sulfur_nether_ore",
     "endandnether:ruby_nether_ore",
     "endandnether:raw_black_opal_block",
     "endandnether:black_opal_end_ore",
     "endandnether:bismuth_end_ore",
-    "endandnether:pink_garnet_end_ore"
+    "endandnether:pink_garnet_end_ore",
+    "endandnether:end_stone_brick_pillar"
   ]
 }

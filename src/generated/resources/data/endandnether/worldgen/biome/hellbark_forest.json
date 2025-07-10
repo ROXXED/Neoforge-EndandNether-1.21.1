@@ -18,7 +18,7 @@
     },
     "particle": {
       "options": {
-        "type": "minecraft:glow"
+        "type": "minecraft:white_ash"
       },
       "probability": 0.00725
     },
@@ -35,8 +35,7 @@
     [],
     [],
     [
-      "minecraft:glowstone_extra",
-      "minecraft:glowstone",
+      "minecraft:nether_sprouts",
       "minecraft:red_mushroom_nether",
       "minecraft:ore_magma"
     ]
@@ -48,14 +47,7 @@
     "axolotls": [],
     "creature": [],
     "misc": [],
-    "monster": [
-      {
-        "type": "minecraft:ghast",
-        "maxCount": 1,
-        "minCount": 1,
-        "weight": 10
-      }
-    ],
+    "monster": [],
     "underground_water_creature": [],
     "water_ambient": [],
     "water_creature": []

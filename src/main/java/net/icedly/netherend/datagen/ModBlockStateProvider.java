@@ -27,11 +27,13 @@ public class ModBlockStateProvider extends BlockStateProvider {
         blockWithItem(ModBlocks.ROTTED_END_STONE);
         blockWithItem(ModBlocks.END_SAND);
         blockWithItem(ModBlocks.RAW_BLACK_OPAL_BLOCK);
+        blockWithItem(ModBlocks.DEEP_NETHERRACK);
         blockWithItem(ModBlocks.BLACK_OPAL_END_ORE);
         blockWithItem(ModBlocks.BISMUTH_END_ORE);
         blockWithItem(ModBlocks.SULFUR_NETHER_ORE);
         blockWithItem(ModBlocks.RUBY_NETHER_ORE);
         blockWithItem(ModBlocks.PINK_GARNET_END_ORE);
+        blockWithItem(ModBlocks.END_STONE_BRICK_PILLAR);
 
         logBlock(((RotatedPillarBlock) ModBlocks.HELLBARK_LOG.get()));
         axisBlock(((RotatedPillarBlock) ModBlocks.HELLBARK_WOOD.get()), blockTexture(ModBlocks.HELLBARK_LOG.get()), blockTexture(ModBlocks.HELLBARK_LOG.get()));

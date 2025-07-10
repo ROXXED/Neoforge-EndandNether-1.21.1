@@ -21,7 +21,7 @@ public class ModCreativeModeTabs {
     public static final Supplier<CreativeModeTab> NETHER_EXTENDED_TAB =
             CREATIVE_MOD_TABS.register("nether_extended_tab", () -> CreativeModeTab.builder()
                     .title(Component.translatable("itemGroup.endandnether.nether_extended_tab"))
-                    .icon(() -> new ItemStack(ModItems.RAW_SULFUR.get()))
+                    .icon(() -> new ItemStack(ModBlocks.RUBY_BLOCK.get()))
                     .displayItems((pParameters, pOutput) -> {
                         pOutput.accept(ModItems.RAW_SULFUR);
                         pOutput.accept(ModItems.SULFUR_INGOT);
@@ -30,6 +30,7 @@ public class ModCreativeModeTabs {
                         pOutput.accept(ModBlocks.SULFUR_NETHER_ORE);
                         pOutput.accept(ModBlocks.RUBY_NETHER_ORE);
                         pOutput.accept(ModBlocks.RUBY_BLOCK);
+                        pOutput.accept(ModBlocks.DEEP_NETHERRACK);
                         pOutput.accept(ModBlocks.HELLBARK_LEAVES);
                         pOutput.accept(ModBlocks.HELLBARK_LOG);
                         pOutput.accept(ModBlocks.HELLBARK_PLANKS);
@@ -39,7 +40,7 @@ public class ModCreativeModeTabs {
                     }).build());    public static final Supplier<CreativeModeTab> END_EXTENDED_TAB =
             CREATIVE_MOD_TABS.register("end_extended_tab", () -> CreativeModeTab.builder()
                     .title(Component.translatable("itemGroup.endandnether.end_extended_tab"))
-                    .icon(() -> new ItemStack(ModItems.RAW_BLACK_OPAL.get()))
+                    .icon(() -> new ItemStack(ModBlocks.PINK_GARNET_BLOCK.get()))
                     .withTabsBefore(ResourceLocation.fromNamespaceAndPath(EndandNether.MOD_ID, "nether_extended_tab"))
                     .displayItems((pParameters, pOutput) -> {
                         pOutput.accept(ModItems.BLACK_OPAL);
@@ -75,6 +76,7 @@ public class ModCreativeModeTabs {
                         pOutput.accept(ModBlocks.PINK_GARNET_BLOCK);
                         pOutput.accept(ModBlocks.RAW_PINK_GARNET_BLOCK);
                         pOutput.accept(ModBlocks.PINK_GARNET_END_ORE);
+                        pOutput.accept(ModBlocks.END_STONE_BRICK_PILLAR);
 
 
                         pOutput.accept(ModItems.BLACK_OPAL_HELMET);

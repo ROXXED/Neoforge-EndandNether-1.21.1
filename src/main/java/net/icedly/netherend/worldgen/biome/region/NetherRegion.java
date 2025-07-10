@@ -27,6 +27,6 @@ public class NetherRegion extends Region {
                 Climate.Parameter.point(0.0F),
                 Climate.Parameter.point(0.0F),
                 Climate.Parameter.point(0.0F),
-                Climate.Parameter.point(0.0F), 0.0F, ModBiomes.GLOWSTONE_PLAIN);
+                Climate.Parameter.point(0.0F), 0.0F, ModBiomes.HELLBARK_FOREST);
     }
 }

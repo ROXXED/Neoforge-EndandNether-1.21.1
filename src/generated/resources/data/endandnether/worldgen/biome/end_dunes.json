@@ -35,11 +35,7 @@
     [],
     [],
     [
-      "minecraft:chorus_plant"
-    ],
-    [],
-    [
-      "minecraft:chorus_plant"
+      "minecraft:end_spike"
     ]
   ],
   "has_precipitation": false,
@@ -47,20 +43,7 @@
   "spawners": {
     "ambient": [],
     "axolotls": [],
-    "creature": [
-      {
-        "type": "minecraft:enderman",
-        "maxCount": 4,
-        "minCount": 2,
-        "weight": 20
-      },
-      {
-        "type": "minecraft:phantom",
-        "maxCount": 3,
-        "minCount": 2,
-        "weight": 20
-      }
-    ],
+    "creature": [],
     "misc": [],
     "monster": [],
     "underground_water_creature": [],

@@ -1,0 +1,10 @@
+{
+  "type": "endandnether:add_item",
+  "conditions": [
+    {
+      "condition": "neoforge:loot_table_id",
+      "loot_table_id": "minecraft:chests/ruined_portal"
+    }
+  ],
+  "item": "endandnether:raw_sulfur"
+}

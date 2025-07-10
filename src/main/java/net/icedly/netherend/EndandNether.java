@@ -5,6 +5,7 @@ import net.icedly.netherend.event.ModEvents;
 import net.icedly.netherend.item.ModArmorMaterials;
 import net.icedly.netherend.item.ModCreativeModeTabs;
 import net.icedly.netherend.item.ModItems;
+import net.icedly.netherend.loot.ModLootModifiers;
 import net.icedly.netherend.worldgen.biome.ModBiomes;
 import net.icedly.netherend.worldgen.biome.ModSurfaceRules;
 import net.neoforged.neoforge.client.event.RegisterMenuScreensEvent;
@@ -60,6 +61,7 @@ public class EndandNether {
 
         ModArmorMaterials.register(modEventBus);
 
+        ModLootModifiers.register(modEventBus);
 
         // Register the Deferred Register to the mod event bus so blocks get registered
 
@@ -81,7 +83,7 @@ public class EndandNether {
             ModBiomes.registerBiomes();
 
             SurfaceRuleManager.addSurfaceRules(SurfaceRuleManager.RuleCategory.NETHER, MOD_ID, ModSurfaceRules.makeGlowstonePlainsRules());
-            SurfaceRuleManager.addSurfaceRules(SurfaceRuleManager.RuleCategory.END, MOD_ID, ModSurfaceRules.makeEndRotRules());
+
             SurfaceRuleManager.addSurfaceRules(SurfaceRuleManager.RuleCategory.END, MOD_ID, ModSurfaceRules.makeEndDunesRules());
 
         });
