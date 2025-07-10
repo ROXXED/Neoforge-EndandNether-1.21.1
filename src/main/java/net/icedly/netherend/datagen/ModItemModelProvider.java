@@ -82,6 +82,9 @@ public class ModItemModelProvider extends ItemModelProvider {
 
 
         saplingItem(ModBlocks.HELLBARK_SAPLING);
+
+        flowerItem(ModBlocks.JAZIA);
+
     }
 
     // Shoutout to El_Redstoniano for making this
@@ -130,7 +133,11 @@ public class ModItemModelProvider extends ItemModelProvider {
         }
     }
 
-
+    public void flowerItem(DeferredBlock<Block> block) {
+        this.withExistingParent(block.getId().getPath(), mcLoc("item/generated"))
+                .texture("layer0", ResourceLocation.fromNamespaceAndPath(EndandNether.MOD_ID,
+                        "block/" + block.getId().getPath()));
+    }
 
     private ItemModelBuilder saplingItem(DeferredBlock<Block> item) {
         return withExistingParent(item.getId().getPath(),

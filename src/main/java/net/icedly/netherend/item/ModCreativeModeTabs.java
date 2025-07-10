@@ -77,6 +77,9 @@ public class ModCreativeModeTabs {
                         pOutput.accept(ModBlocks.RAW_PINK_GARNET_BLOCK);
                         pOutput.accept(ModBlocks.PINK_GARNET_END_ORE);
                         pOutput.accept(ModBlocks.END_STONE_BRICK_PILLAR);
+                        pOutput.accept(ModBlocks.ROUGH_STONE);
+                        pOutput.accept(ModBlocks.ROUGH_STONE_BRICKS);
+                        pOutput.accept(ModBlocks.JAZIA);
 
 
                         pOutput.accept(ModItems.BLACK_OPAL_HELMET);

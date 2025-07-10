@@ -32,6 +32,8 @@ public class ModBlockLootTableProvider extends BlockLootSubProvider {
         dropSelf(ModBlocks.RAW_PINK_GARNET_BLOCK.get());
         dropSelf(ModBlocks.END_STONE_BRICK_PILLAR.get());
         dropSelf(ModBlocks.DEEP_NETHERRACK.get());
+        dropSelf(ModBlocks.ROUGH_STONE.get());
+        dropSelf(ModBlocks.ROUGH_STONE_BRICKS.get());
         this.dropSelf(ModBlocks.HELLBARK_LOG.get());
         this.dropSelf(ModBlocks.HELLBARK_WOOD.get());
         this.dropSelf(ModBlocks.HELLBARK_PLANKS.get());
@@ -39,6 +41,8 @@ public class ModBlockLootTableProvider extends BlockLootSubProvider {
         this.dropSelf(ModBlocks.STRIPPED_HELLBARK_LOG.get());
         this.dropSelf(ModBlocks.STRIPPED_HELLBARK_WOOD.get());
 
+        this.dropSelf(ModBlocks.JAZIA.get());
+        this.add(ModBlocks.POTTED_JAZIA.get(), createPotFlowerItemTable(ModBlocks.JAZIA));
 
         this.add(ModBlocks.HELLBARK_LEAVES.get(), block ->
                 createLeavesDrops(block, ModBlocks.HELLBARK_SAPLING.get(), NORMAL_LEAVES_SAPLING_CHANCES));

@@ -28,6 +28,8 @@ public class ModBlockTagProvider extends BlockTagsProvider {
                 .add(ModBlocks.DEEP_NETHERRACK.get())
                 .add(ModBlocks.SULFUR_NETHER_ORE.get())
                 .add(ModBlocks.RUBY_NETHER_ORE.get())
+                .add(ModBlocks.ROUGH_STONE_BRICKS.get())
+                .add(ModBlocks.ROUGH_STONE.get())
                 .add(ModBlocks.RAW_BLACK_OPAL_BLOCK.get())
                 .add(ModBlocks.BLACK_OPAL_END_ORE.get())
                 .add(ModBlocks.BISMUTH_END_ORE.get())

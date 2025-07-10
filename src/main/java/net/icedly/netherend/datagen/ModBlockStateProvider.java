@@ -28,12 +28,21 @@ public class ModBlockStateProvider extends BlockStateProvider {
         blockWithItem(ModBlocks.END_SAND);
         blockWithItem(ModBlocks.RAW_BLACK_OPAL_BLOCK);
         blockWithItem(ModBlocks.DEEP_NETHERRACK);
+        blockWithItem(ModBlocks.ROUGH_STONE);
+        blockWithItem(ModBlocks.ROUGH_STONE_BRICKS);
         blockWithItem(ModBlocks.BLACK_OPAL_END_ORE);
         blockWithItem(ModBlocks.BISMUTH_END_ORE);
         blockWithItem(ModBlocks.SULFUR_NETHER_ORE);
         blockWithItem(ModBlocks.RUBY_NETHER_ORE);
         blockWithItem(ModBlocks.PINK_GARNET_END_ORE);
         blockWithItem(ModBlocks.END_STONE_BRICK_PILLAR);
+
+        simpleBlock(ModBlocks.JAZIA.get(),
+                models().cross(blockTexture(ModBlocks.JAZIA.get()).getPath(), blockTexture(ModBlocks.JAZIA.get())).renderType("cutout"));
+        simpleBlock(ModBlocks.POTTED_JAZIA.get(), models().singleTexture("potted_jazia", ResourceLocation.parse("flower_pot_cross"), "plant",
+                blockTexture(ModBlocks.JAZIA.get())).renderType("cutout"));
+
+
 
         logBlock(((RotatedPillarBlock) ModBlocks.HELLBARK_LOG.get()));
         axisBlock(((RotatedPillarBlock) ModBlocks.HELLBARK_WOOD.get()), blockTexture(ModBlocks.HELLBARK_LOG.get()), blockTexture(ModBlocks.HELLBARK_LOG.get()));

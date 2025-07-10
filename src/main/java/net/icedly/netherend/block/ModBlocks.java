@@ -6,6 +6,7 @@ import net.icedly.netherend.block.custom.ModSaplingBlock;
 import net.icedly.netherend.item.ModItems;
 import net.icedly.netherend.worldgen.tree.ModTreeGrowers;
 import net.minecraft.util.valueproviders.UniformInt;
+import net.minecraft.world.effect.MobEffects;
 import net.minecraft.world.item.BlockItem;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.level.block.*;
@@ -30,6 +31,10 @@ public class ModBlocks {
             () -> new Block(BlockBehaviour.Properties.of().strength(4f).requiresCorrectToolForDrops()));
     public static final DeferredBlock<Block> DEEP_NETHERRACK = registerBlock("deep_netherrack",
             () -> new Block(BlockBehaviour.Properties.of().strength(4f).requiresCorrectToolForDrops()));
+    public static final DeferredBlock<Block> ROUGH_STONE = registerBlock("rough_stone",
+            () -> new Block(BlockBehaviour.Properties.of().strength(4f)));
+    public static final DeferredBlock<Block> ROUGH_STONE_BRICKS = registerBlock("rough_stone_bricks",
+            () -> new Block(BlockBehaviour.Properties.of().strength(4f)));
     public static final DeferredBlock<Block> ROTTED_END_STONE = registerBlock("rotted_end_stone",
             () -> new Block(BlockBehaviour.Properties.of().strength(4f)));
     public static final DeferredBlock<Block> END_SAND = registerBlock("end_sand",
@@ -74,6 +79,12 @@ public class ModBlocks {
 
     public static final DeferredBlock<Block> HELLBARK_SAPLING = registerBlock("hellbark_sapling",
             () -> new ModSaplingBlock(ModTreeGrowers.HELLBARK, BlockBehaviour.Properties.ofFullCopy(Blocks.OAK_SAPLING), () -> Blocks.NETHERRACK));
+
+    public static final DeferredBlock<Block> JAZIA = registerBlock("jazia",
+            () -> new FlowerBlock(MobEffects.WEAKNESS, 10, BlockBehaviour.Properties.ofFullCopy(Blocks.ALLIUM)));
+    public static final DeferredBlock<Block> POTTED_JAZIA = BLOCKS.register("potted_jazia",
+            () -> new FlowerPotBlock(() -> ((FlowerPotBlock) Blocks.FLOWER_POT), JAZIA, BlockBehaviour.Properties.ofFullCopy(Blocks.POTTED_ALLIUM)));
+
 
     private static <T extends Block>DeferredBlock<T> registerBlock(String name, Supplier<T> block) {
         DeferredBlock<T> toReturn = BLOCKS.register(name, block);

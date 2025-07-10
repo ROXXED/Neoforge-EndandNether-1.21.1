@@ -8,6 +8,7 @@ import net.icedly.netherend.item.ModItems;
 import net.icedly.netherend.loot.ModLootModifiers;
 import net.icedly.netherend.worldgen.biome.ModBiomes;
 import net.icedly.netherend.worldgen.biome.ModSurfaceRules;
+import net.minecraft.world.level.block.FlowerPotBlock;
 import net.neoforged.neoforge.client.event.RegisterMenuScreensEvent;
 import org.slf4j.Logger;
 
@@ -80,6 +81,9 @@ public class EndandNether {
     private void commonSetup(FMLCommonSetupEvent event) {
         event.enqueueWork(() -> {
 
+            ((FlowerPotBlock) Blocks.FLOWER_POT).addPlant(ModBlocks.JAZIA.getId(), ModBlocks.POTTED_JAZIA);
+
+
             ModBiomes.registerBiomes();
 
             SurfaceRuleManager.addSurfaceRules(SurfaceRuleManager.RuleCategory.NETHER, MOD_ID, ModSurfaceRules.makeGlowstonePlainsRules());
@@ -87,14 +91,6 @@ public class EndandNether {
             SurfaceRuleManager.addSurfaceRules(SurfaceRuleManager.RuleCategory.END, MOD_ID, ModSurfaceRules.makeEndDunesRules());
 
         });
-
-        if (Config.LOG_DIRT_BLOCK.getAsBoolean()) {
-            LOGGER.info("DIRT BLOCK >> {}", BuiltInRegistries.BLOCK.getKey(Blocks.DIRT));
-        }
-
-        LOGGER.info("{}{}", Config.MAGIC_NUMBER_INTRODUCTION.get(), Config.MAGIC_NUMBER.getAsInt());
-
-        Config.ITEM_STRINGS.get().forEach((item) -> LOGGER.info("ITEM >> {}", item));
     }
 
     // Add the example block item to the building blocks tab
