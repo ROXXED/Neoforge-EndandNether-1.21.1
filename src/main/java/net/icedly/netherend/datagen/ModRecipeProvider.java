@@ -91,6 +91,13 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
                 .define('A', ModItems.RUBY_INGOT.get())
                 .unlockedBy("has_ruby", has(ModItems.RUBY_INGOT.get())).save(recipeOutput);
 
+        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModBlocks.AMBER_BLOCK.get())
+                .pattern("AAA")
+                .pattern("AAA")
+                .pattern("AAA")
+                .define('A', ModItems.AMBER.get())
+                .unlockedBy("has_amber", has(ModItems.AMBER.get())).save(recipeOutput);
+
         ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModItems.ENDER_SPIKE_SPEAR.get())
                 .pattern(" B ")
                 .pattern(" A ")
@@ -222,6 +229,10 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
         ShapelessRecipeBuilder.shapeless(RecipeCategory.MISC, ModItems.PINK_GARNET.get(), 9)
                 .requires(ModBlocks.PINK_GARNET_BLOCK.get())
                 .unlockedBy("has_pink_garnet_block", has(ModBlocks.PINK_GARNET_BLOCK.get())).save(recipeOutput);
+
+        ShapelessRecipeBuilder.shapeless(RecipeCategory.MISC, ModItems.AMBER.get(), 9)
+                .requires(ModBlocks.AMBER_BLOCK.get())
+                .unlockedBy("has_amber_block", has(ModBlocks.AMBER_BLOCK.get())).save(recipeOutput);
 
 
         oreBlasting(recipeOutput, BISMUTH_SMELTABLES, RecipeCategory.MISC, ModItems.BISMUTH.get(), 0.25f ,200, "bismuth");

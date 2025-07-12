@@ -29,6 +29,8 @@ public class ModBlocks {
             () -> new Block(BlockBehaviour.Properties.of().strength(4f).requiresCorrectToolForDrops()));
     public static final DeferredBlock<Block> BISMUTH_BLOCK = registerBlock("bismuth_block",
             () -> new Block(BlockBehaviour.Properties.of().strength(4f).requiresCorrectToolForDrops()));
+    public static final DeferredBlock<Block> AMBER_BLOCK = registerBlock("amber_block",
+            () -> new Block(BlockBehaviour.Properties.of().strength(4f).requiresCorrectToolForDrops()));
     public static final DeferredBlock<Block> DEEP_NETHERRACK = registerBlock("deep_netherrack",
             () -> new Block(BlockBehaviour.Properties.of().strength(4f).requiresCorrectToolForDrops()));
     public static final DeferredBlock<Block> ROUGH_STONE = registerBlock("rough_stone",
@@ -39,6 +41,8 @@ public class ModBlocks {
             () -> new Block(BlockBehaviour.Properties.of().strength(4f)));
     public static final DeferredBlock<Block> END_SAND = registerBlock("end_sand",
             () -> new Block(BlockBehaviour.Properties.of().strength(4f).sound(SoundType.SAND)));
+    public static final DeferredBlock<Block> END_DIRT = registerBlock("end_dirt",
+            () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.DIRT).strength(4f).sound(SoundType.ROOTED_DIRT)));
     public static final DeferredBlock<Block> RUBY_BLOCK = registerBlock("ruby_block",
             () -> new Block(BlockBehaviour.Properties.of().strength(4f).requiresCorrectToolForDrops()));
     public static final DeferredBlock<Block> RAW_BLACK_OPAL_BLOCK = registerBlock("raw_black_opal_block",
@@ -56,6 +60,9 @@ public class ModBlocks {
             () -> new DropExperienceBlock(UniformInt.of(2, 5),
                     BlockBehaviour.Properties.of().strength(4f).requiresCorrectToolForDrops()));
     public static final DeferredBlock<Block> PINK_GARNET_END_ORE = registerBlock("pink_garnet_end_ore",
+            () -> new DropExperienceBlock(UniformInt.of(2, 5),
+                    BlockBehaviour.Properties.of().strength(4f).requiresCorrectToolForDrops()));
+    public static final DeferredBlock<Block> AMBER_NETHER_ORE = registerBlock("amber_nether_ore",
             () -> new DropExperienceBlock(UniformInt.of(2, 5),
                     BlockBehaviour.Properties.of().strength(4f).requiresCorrectToolForDrops()));
 

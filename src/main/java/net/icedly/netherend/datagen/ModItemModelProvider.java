@@ -57,6 +57,8 @@ public class ModItemModelProvider extends ItemModelProvider {
         basicItem(ModItems.STARLIGHT_ASHES.get());
         basicItem(ModItems.PINK_GARNET.get());
         basicItem(ModItems.RAW_PINK_GARNET.get());
+        basicItem(ModItems.RAW_AMBER.get());
+        basicItem(ModItems.AMBER.get());
 
         trimmedArmorItem(ModItems.BLACK_OPAL_BOOTS);
         trimmedArmorItem(ModItems.BLACK_OPAL_HELMET);

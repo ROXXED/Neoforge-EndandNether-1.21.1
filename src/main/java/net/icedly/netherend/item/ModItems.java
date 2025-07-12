@@ -50,6 +50,12 @@ public class ModItems {
     public static final DeferredItem<Item> RAW_PINK_GARNET =
             ITEMS.registerItem("raw_pink_garnet",
             Item::new, new Item.Properties());
+    public static final DeferredItem<Item> RAW_AMBER =
+            ITEMS.registerItem("raw_amber",
+            Item::new, new Item.Properties());
+    public static final DeferredItem<Item> AMBER =
+            ITEMS.registerItem("amber",
+            Item::new, new Item.Properties());
     public static final DeferredItem<Item> STARLIGHT_ASHES = ITEMS.register("starlight_ashes",
             () -> new FuelItem(new Item.Properties(), 1200));
 

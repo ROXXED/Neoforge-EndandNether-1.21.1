@@ -27,6 +27,8 @@ public class ModCreativeModeTabs {
                         pOutput.accept(ModItems.SULFUR_INGOT);
                         pOutput.accept(ModItems.RAW_RUBY);
                         pOutput.accept(ModItems.RUBY_INGOT);
+                        pOutput.accept(ModItems.RAW_AMBER);
+                        pOutput.accept(ModItems.AMBER);
                         pOutput.accept(ModBlocks.SULFUR_NETHER_ORE);
                         pOutput.accept(ModBlocks.RUBY_NETHER_ORE);
                         pOutput.accept(ModBlocks.RUBY_BLOCK);
@@ -36,6 +38,8 @@ public class ModCreativeModeTabs {
                         pOutput.accept(ModBlocks.HELLBARK_PLANKS);
                         pOutput.accept(ModBlocks.HELLBARK_SAPLING);
                         pOutput.accept(ModBlocks.STRIPPED_HELLBARK_LOG);
+                        pOutput.accept(ModBlocks.AMBER_BLOCK);
+                        pOutput.accept(ModBlocks.AMBER_NETHER_ORE);
 
                     }).build());    public static final Supplier<CreativeModeTab> END_EXTENDED_TAB =
             CREATIVE_MOD_TABS.register("end_extended_tab", () -> CreativeModeTab.builder()
@@ -54,6 +58,7 @@ public class ModCreativeModeTabs {
                         pOutput.accept(ModBlocks.BLACK_OPAL_BLOCK);
                         pOutput.accept(ModBlocks.ROTTED_END_STONE);
                         pOutput.accept(ModBlocks.END_SAND);
+                        pOutput.accept(ModBlocks.END_DIRT);
                         pOutput.accept(ModItems.SKULL_END_ARTIFACT);
                         pOutput.accept(ModItems.ENDER_SPIKE_STICK);
                         pOutput.accept(ModItems.ENDER_SPIKE_SPEAR);

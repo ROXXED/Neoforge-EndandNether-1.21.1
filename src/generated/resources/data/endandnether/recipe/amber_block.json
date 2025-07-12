@@ -1,0 +1,18 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "A": {
+      "item": "endandnether:amber"
+    }
+  },
+  "pattern": [
+    "AAA",
+    "AAA",
+    "AAA"
+  ],
+  "result": {
+    "count": 1,
+    "id": "endandnether:amber_block"
+  }
+}

@@ -1,4 +1,6 @@
-// 1.21.1	2025-07-10T04:08:12.2698655	Recipes
+// 1.21.1	2025-07-11T11:22:11.3199659	Recipes
+79508e8f3f2ab79b295fb3648c76696d2108dd51 data/endandnether/advancement/recipes/misc/amber.json
+46660d88058e536792891e48ee240977d54b8d76 data/endandnether/advancement/recipes/misc/amber_block.json
 9414f0f3841afdb1c193413349863e90aef375b1 data/endandnether/advancement/recipes/misc/bismuth.json
 bf1a971f3bda2a4b428309b3745b6d02631f351f data/endandnether/advancement/recipes/misc/bismuth_axe.json
 3020d3fb3f5d20dab85e22bfa3d34c341cce1945 data/endandnether/advancement/recipes/misc/bismuth_block.json
@@ -41,6 +43,8 @@ e1c3028d36da7413a424226e117ba791e49f4d5d data/endandnether/advancement/recipes/m
 67892bb20feace876ef8a49c3173418fec18e2e2 data/endandnether/advancement/recipes/misc/sulfur_ingot_from_blasting_sulfur_nether_ore.json
 8d38023094d493c3b2be1b611f982cff293856e6 data/endandnether/advancement/recipes/misc/sulfur_ingot_from_smelting_sulfur_ingot.json
 c02fc519fce2402428a1113ae7aa9b18f459536e data/endandnether/advancement/recipes/misc/sulfur_ingot_from_smelting_sulfur_nether_ore.json
+60007372626aeed80c76761a14393b7ad4e6dd9e data/endandnether/recipe/amber.json
+1d2899e65d9a4a2393d53d56445afe7678021c42 data/endandnether/recipe/amber_block.json
 7d221725ad66f2a725fc949ac1f715654f579d62 data/endandnether/recipe/bismuth.json
 d7ae3cac160b61af822f9d280e6cb843dfe085a4 data/endandnether/recipe/bismuth_axe.json
 671bb0d5bdf670b3f748a8254929178fbd6a9445 data/endandnether/recipe/bismuth_block.json

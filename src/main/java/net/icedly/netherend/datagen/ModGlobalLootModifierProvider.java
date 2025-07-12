@@ -21,7 +21,7 @@ public class ModGlobalLootModifierProvider extends GlobalLootModifierProvider {
 
     @Override
     protected void start() {
-        this.add("hellbark_sapling_from_ruined_portal",
+        this.add("raw_sulfur_from_ruined_portal",
                 new AddItemModifier(new LootItemCondition[] {
                         new LootTableIdCondition.Builder(ResourceLocation.withDefaultNamespace("chests/ruined_portal")).build()
                 }, ModItems.RAW_SULFUR.get()));

@@ -2,6 +2,8 @@
   "values": [
     "endandnether:sulfur_nether_ore",
     "endandnether:ruby_nether_ore",
-    "endandnether:deep_netherrack"
+    "endandnether:deep_netherrack",
+    "endandnether:amber_block",
+    "endandnether:amber_nether_ore"
   ]
 }

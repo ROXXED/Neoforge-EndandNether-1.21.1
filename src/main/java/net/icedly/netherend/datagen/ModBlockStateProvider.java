@@ -26,6 +26,7 @@ public class ModBlockStateProvider extends BlockStateProvider {
         blockWithItem(ModBlocks.RUBY_BLOCK);
         blockWithItem(ModBlocks.ROTTED_END_STONE);
         blockWithItem(ModBlocks.END_SAND);
+        blockWithItem(ModBlocks.END_DIRT);
         blockWithItem(ModBlocks.RAW_BLACK_OPAL_BLOCK);
         blockWithItem(ModBlocks.DEEP_NETHERRACK);
         blockWithItem(ModBlocks.ROUGH_STONE);
@@ -36,6 +37,8 @@ public class ModBlockStateProvider extends BlockStateProvider {
         blockWithItem(ModBlocks.RUBY_NETHER_ORE);
         blockWithItem(ModBlocks.PINK_GARNET_END_ORE);
         blockWithItem(ModBlocks.END_STONE_BRICK_PILLAR);
+        blockWithItem(ModBlocks.AMBER_BLOCK);
+        blockWithItem(ModBlocks.AMBER_NETHER_ORE);
 
         simpleBlock(ModBlocks.JAZIA.get(),
                 models().cross(blockTexture(ModBlocks.JAZIA.get()).getPath(), blockTexture(ModBlocks.JAZIA.get())).renderType("cutout"));

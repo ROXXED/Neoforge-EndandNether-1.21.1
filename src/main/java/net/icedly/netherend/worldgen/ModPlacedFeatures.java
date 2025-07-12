@@ -12,17 +12,18 @@ import net.minecraft.resources.ResourceKey;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.level.levelgen.VerticalAnchor;
 import net.minecraft.world.level.levelgen.feature.ConfiguredFeature;
-import net.minecraft.world.level.levelgen.placement.HeightRangePlacement;
-import net.minecraft.world.level.levelgen.placement.PlacedFeature;
-import net.minecraft.world.level.levelgen.placement.PlacementModifier;
+import net.minecraft.world.level.levelgen.placement.*;
 
 import java.util.List;
 
 public class ModPlacedFeatures {
     public static final ResourceKey<PlacedFeature> HELLBARK_PLACED_KEY = registerKey("hellbark_placed");
 
+    public static final ResourceKey<PlacedFeature> JAZIA_PLACED_KEY = registerKey("jazia_placed");
+
     public static final ResourceKey<PlacedFeature> NETHER_SULFUR_ORE_PLACED_KEY = registerKey("nether_sulfur_ore_placed");
     public static final ResourceKey<PlacedFeature> NETHER_RUBY_ORE_PLACED_KEY = registerKey("nether_ruby_ore_placed");
+    public static final ResourceKey<PlacedFeature> NETHER_AMBER_ORE_PLACED_KEY = registerKey("nether_amber_ore_placed");
     public static final ResourceKey<PlacedFeature> END_BLACK_OPAL_ORE_PLACED_KEY = registerKey("end_black_opal_ore_placed");
     public static final ResourceKey<PlacedFeature> END_BISMUTH_ORE_PLACED_KEY = registerKey("end_bismuth_ore_placed");
     public static final ResourceKey<PlacedFeature> END_PINK_GARNET_ORE_PLACED_KEY = registerKey("end_pink_garnet_ore_placed");
@@ -38,6 +39,9 @@ public class ModPlacedFeatures {
         register(context, NETHER_RUBY_ORE_PLACED_KEY, configuredFeatures.getOrThrow(ModConfiguredFeatures.NETHER_RUBY_ORE_KEY),
                 ModOrePlacements.commonOrePlacement(16,
                         HeightRangePlacement.uniform(VerticalAnchor.absolute(-64), VerticalAnchor.absolute(80))));
+        register(context, NETHER_AMBER_ORE_PLACED_KEY, configuredFeatures.getOrThrow(ModConfiguredFeatures.NETHER_AMBER_ORE_KEY),
+                ModOrePlacements.commonOrePlacement(12,
+                        HeightRangePlacement.uniform(VerticalAnchor.absolute(-64), VerticalAnchor.absolute(80))));
         register(context, NETHER_SULFUR_ORE_PLACED_KEY, configuredFeatures.getOrThrow(ModConfiguredFeatures.NETHER_SULFUR_ORE_KEY),
                 ModOrePlacements.commonOrePlacement(24,
                         HeightRangePlacement.uniform(VerticalAnchor.absolute(-64), VerticalAnchor.absolute(80))));
@@ -50,6 +54,9 @@ public class ModPlacedFeatures {
         register(context, END_PINK_GARNET_ORE_PLACED_KEY, configuredFeatures.getOrThrow(ModConfiguredFeatures.END_PINK_GARNET_ORE_KEY),
                 ModOrePlacements.commonOrePlacement(4,
                         HeightRangePlacement.uniform(VerticalAnchor.absolute(-64), VerticalAnchor.absolute(80))));
+
+        register(context, JAZIA_PLACED_KEY, configuredFeatures.getOrThrow(ModConfiguredFeatures.JAZIA_KEY),
+                List.of(RarityFilter.onAverageOnceEvery(16), InSquarePlacement.spread(), PlacementUtils.HEIGHTMAP, BiomeFilter.biome()));
 
     }
 

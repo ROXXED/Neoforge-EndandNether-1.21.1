@@ -1,9 +1,12 @@
-// 1.21.1	2025-07-10T19:22:08.1884537	Loot Tables
+// 1.21.1	2025-07-11T11:22:11.3169649	Loot Tables
+1e846b202f8487e25b859fb5d8f49cab2cfed57c data/endandnether/loot_table/blocks/amber_block.json
+87be0fee8e1ba4242ec21f3de3c1d321c1fdaff0 data/endandnether/loot_table/blocks/amber_nether_ore.json
 2691df6ea1d7ec190eb2786b7aa0bbf53171289d data/endandnether/loot_table/blocks/bismuth_block.json
 4b51ef8bb373cf530b9c81d2e4f8ae8b98c0b3b7 data/endandnether/loot_table/blocks/bismuth_end_ore.json
 3c74233114ac195afeb1347fc4dce2ef693aa295 data/endandnether/loot_table/blocks/black_opal_block.json
 01021c230df2df9625cf32f7122f8a0acfaf4ce0 data/endandnether/loot_table/blocks/black_opal_end_ore.json
 21c65e11c5de6def0ec14e4b52b9f5bd1bab221c data/endandnether/loot_table/blocks/deep_netherrack.json
+5743eccac64bcd562d532c19308b6c87583f7859 data/endandnether/loot_table/blocks/end_dirt.json
 1e7b09e4dc4178be997d6506eeaa82a79a2f2398 data/endandnether/loot_table/blocks/end_sand.json
 c776ccd9ccacb5617f54ae6a9d88c33f7754797d data/endandnether/loot_table/blocks/end_stone_brick_pillar.json
 5e40229235a2d6b27966c5a815bfe42ca65eb56b data/endandnether/loot_table/blocks/hellbark_leaves.json

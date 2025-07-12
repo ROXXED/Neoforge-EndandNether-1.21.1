@@ -34,12 +34,16 @@ public class ModBlockTagProvider extends BlockTagsProvider {
                 .add(ModBlocks.BLACK_OPAL_END_ORE.get())
                 .add(ModBlocks.BISMUTH_END_ORE.get())
                 .add(ModBlocks.PINK_GARNET_END_ORE.get())
-                .add(ModBlocks.END_STONE_BRICK_PILLAR.get());
+                .add(ModBlocks.END_STONE_BRICK_PILLAR.get())
+                .add(ModBlocks.AMBER_BLOCK.get())
+                .add(ModBlocks.AMBER_NETHER_ORE.get());
 
         this.tag(BlockTags.NEEDS_IRON_TOOL)
                 .add(ModBlocks.SULFUR_NETHER_ORE.get())
                 .add(ModBlocks.RUBY_NETHER_ORE.get())
-                .add(ModBlocks.DEEP_NETHERRACK.get());
+                .add(ModBlocks.DEEP_NETHERRACK.get())
+                .add(ModBlocks.AMBER_BLOCK.get())
+                .add(ModBlocks.AMBER_NETHER_ORE.get());
 
         this.tag(BlockTags.NEEDS_DIAMOND_TOOL)
                 .add(ModBlocks.BLACK_OPAL_BLOCK.get())

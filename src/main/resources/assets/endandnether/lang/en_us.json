@@ -61,8 +61,11 @@
   "block.endandnether.end_stone_brick_pillar": "End Stone Brick Pillar",
   "block.endandnether.jazia": "Jazia",
   "block.endandnether.potted_jazia": "Potted Jazia",
-
-  "block.endandnether.growth_chamber": "Growth Chamber",
+  "block.endandnether.end_dirt": "End Dirt",
+  "block.endandnether.amber_block": "Block Of Amber",
+  "block.endandnether.amber_nether_ore": "Amber Ore",
+  "item.endandnether.amber": "Amber",
+  "item.endandnether.raw_amber": "Raw Amber",
 
   "block.endandnether.hellbark_sapling": "Hellbark Sapling",
 
